@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="ui-container">
+        <!-- Header Bar -->
+        <div id="header">
+            <div id="player-profile">
+                <img id="player-avatar" src="assets/images/ui/player-avatar.png" alt="Avatar" onerror="this.style.display='none'">
+                <span id="player-name">Player</span>
+            </div>
+            <div id="resources">
+                <div class="resource">
+                    <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                    <span id="coins">1000</span>
+                </div>
+                <div class="resource">
+                    <img src="assets/images/ui/currency/gem.png" alt="Gems">
+                    <span id="gems">50</span>
+                </div>
+            </div>
+            <div id="storage-buttons">
+                <button id="barn-btn">
+                    <img src="assets/images/buildings/storage-barn.png" alt="Barn">
+                </button>
+                <button id="silo-btn">
+                    <img src="assets/images/buildings/silo.png" alt="Silo">
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas" width="1200" height="700"></canvas>
+
+        <!-- Toolbar -->
+        <div id="toolbar">
+            <button class="tool-btn" data-seed="maize">
+                <img src="assets/images/ui/seeds/maize.png" alt="Maize" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" data-seed="wheat">
+                <img src="assets/images/ui/seeds/wheat.png" alt="Wheat" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" data-seed="rice">
+                <img src="assets/images/ui/seeds/rice.png" alt="Rice" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" data-seed="potato">
+                <img src="assets/images/ui/seeds/potato.png" alt="Potato" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" id="seeds-btn">
+                <img src="assets/images/ui/icons/seeds-icon.png" alt="Seeds" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" id="fertilizer-btn">
+                <img src="assets/images/ui/icons/fertilizer-icon.png" alt="Fertilizer" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" id="tools-btn">
+                <img src="assets/images/ui/icons/tools-icon.png" alt="Tools" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" id="buildings-btn">
+                <img src="assets/images/ui/icons/buildings-icon.png" alt="Buildings" onerror="this.style.display='none'">
+            </button>
+            <button class="tool-btn" id="market-btn">
+                <img src="assets/images/ui/icons/market-icon.png" alt="Market" onerror="this.style.display='none'">
+            </button>
+        </div>
+
+        <!-- Back to Mountain Button -->
+        <button id="back-to-mountain" style="display: none;">Back to Mountain</button>
+    </div>
+
+    <!-- Plot Detail Modal -->
+    <div id="plot-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Plot Actions</h2>
+            <div id="plot-actions">
+                <button id="plant-btn">
+                    <img src="assets/images/ui/icons/icon-plant.png" alt="Plant">
+                    Plant
+                </button>
+                <button id="fertilize-btn">
+                    <img src="assets/images/ui/icons/icon-fertilize.png" alt="Fertilize">
+                    Fertilize
+                </button>
+                <button id="water-btn">
+                    <img src="assets/images/ui/icons/icon-water.png" alt="Water" onerror="this.style.display='none'">
+                    Water
+                </button>
+                <button id="harvest-btn">
+                    <img src="assets/images/ui/icons/icon-harvest.png" alt="Harvest">
+                    Harvest
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seed Selection Modal -->
+    <div id="seed-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select Seed</h2>
+            <div id="seed-selection">
+                <button class="seed-option" data-seed="maize">
+                    <img src="assets/images/ui/seeds/maize.png" alt="Maize" onerror="this.style.display='none'">
+                    <span>Maize - 10 coins</span>
+                </button>
+                <button class="seed-option" data-seed="wheat">
+                    <img src="assets/images/ui/seeds/wheat.png" alt="Wheat" onerror="this.style.display='none'">
+                    <span>Wheat - 8 coins</span>
+                </button>
+                <button class="seed-option" data-seed="rice">
+                    <img src="assets/images/ui/seeds/rice.png" alt="Rice" onerror="this.style.display='none'">
+                    <span>Rice - 12 coins</span>
+                </button>
+                <button class="seed-option" data-seed="potato">
+                    <img src="assets/images/ui/seeds/potato.png" alt="Potato" onerror="this.style.display='none'">
+                    <span>Potato - 6 coins</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barn Modal -->
+    <div id="barn-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Barn Storage</h2>
+            <div id="barn-content">
+                <p>Your harvested crops are stored here.</p>
+                <div id="barn-inventory">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Silo Modal -->
+    <div id="silo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Silo Storage</h2>
+            <div id="silo-content">
+                <p>Your seeds and fertilizers are stored here.</p>
+                <div id="silo-inventory">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/crop.js"></script>
+    <script src="js/plot.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

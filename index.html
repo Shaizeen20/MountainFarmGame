@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Main 3-column layout -->
+    <div id="game-container">
+        <!-- Left Sidebar -->
+        <aside id="left-sidebar">
+            <!-- Player Profile -->
+            <div class="sidebar-section player-section">
+                <div class="profile-header">
+                    <img id="player-avatar" src="assets/images/ui/player-avatar.png" alt="Avatar" onerror="this.style.display='none'">
+                    <div class="player-details">
+                        <h3 id="player-name">Farmer Raj</h3>
+                        <p class="player-level">Level 3 Farmer</p>
+                    </div>
+                </div>
+                <div class="resources">
+                    <div class="resource">
+                        <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                        <span id="coins">1000</span>
+                    </div>
+                    <div class="resource">
+                        <img src="assets/images/ui/currency/gem.png" alt="Gems">
+                        <span id="gems">50</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainability Meters -->
+            <div class="sidebar-section meters-section">
+                <h3 class="section-title">SUSTAINABILITY METERS</h3>
+                <div class="meter" data-meter="soil-health">
+                    <label>Soil Health</label>
+                    <div class="meter-bar">
+                        <div class="meter-fill" style="width: 75%"></div>
+                    </div>
+                    <span class="meter-value">75%</span>
+                </div>
+                <div class="meter" data-meter="organic-score">
+                    <label>Organic Score</label>
+                    <div class="meter-bar">
+                        <div class="meter-fill organic" style="width: 60%"></div>
+                    </div>
+                    <span class="meter-value">60%</span>
+                </div>
+                <div class="meter" data-meter="water-conservation">
+                    <label>Water Conservation</label>
+                    <div class="meter-bar">
+                        <div class="meter-fill water" style="width: 45%"></div>
+                    </div>
+                    <span class="meter-value">45%</span>
+                </div>
+            </div>
+
+            <!-- AI Mentor -->
+            <div class="sidebar-section mentor-section">
+                <h3 class="section-title">AI MENTOR</h3>
+                <div class="mentor-tip">
+                    <div class="mentor-avatar">🧑‍🌾</div>
+                    <p class="tip-text">"Consider crop rotation to improve soil health!"</p>
+                    <button class="get-advice-btn">Get Advice</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Game Area -->
+        <main id="center-game">
+            <img id="mountain-img" src="assets/images/environment/background-mountain.png" alt="Mountain background">
+
+            <!-- Clickable soil regions (invisible boxes) -->
+            <div id="soil-regions">
+                <!-- These will be positioned over the soil areas in the mountain image -->
+                <div class="soil-region" id="plateau-region" data-soil="plateau"></div>
+                <div class="soil-region" id="hillside-region" data-soil="hillside"></div>
+                <div class="soil-region" id="mountain-region" data-soil="mountain"></div>
+                <div class="soil-region" id="alluvial-region" data-soil="alluvial"></div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside id="right-sidebar">
+            <!-- Weather & Climate -->
+            <div class="sidebar-section weather-section">
+                <h3 class="section-title">WEATHER & CLIMATE</h3>
+                <div class="weather-info">
+                    <div class="weather-icon">☀️</div>
+                    <div class="weather-details">
+                        <p class="weather-temp">28°C</p>
+                        <p class="weather-desc">Sunny</p>
+                        <p class="weather-humidity">Humidity: 65%</p>
+                    </div>
+                </div>
+                <div class="groundwater">
+                    <label>Groundwater Level</label>
+                    <div class="meter-bar">
+                        <div class="meter-fill water" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market & Economy -->
+            <div class="sidebar-section market-section">
+                <h3 class="section-title">MARKET PRICES</h3>
+                <div class="market-item">
+                    <span class="crop-name">Wheat</span>
+                    <span class="crop-price">₹25/kg</span>
+                    <span class="price-trend up">↗</span>
+                </div>
+                <div class="market-item">
+                    <span class="crop-name">Rice</span>
+                    <span class="crop-price">₹30/kg</span>
+                    <span class="price-trend down">↘</span>
+                </div>
+                <div class="market-item">
+                    <span class="crop-name">Maize</span>
+                    <span class="crop-price">₹22/kg</span>
+                    <span class="price-trend stable">→</span>
+                </div>
+            </div>
+
+            <!-- Government Schemes -->
+            <div class="sidebar-section schemes-section">
+                <h3 class="section-title">GOVT SCHEMES</h3>
+                <div class="scheme-item clickable" data-scheme="pmkisan">
+                    <h4>PM-Kisan Scheme</h4>
+                    <p>₹6000 annual support</p>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="scheme-item clickable" data-scheme="soilhealth">
+                    <h4>Soil Health Card</h4>
+                    <p>Free soil testing</p>
+                    <span class="expand-icon">+</span>
+                </div>
+            </div>
+
+            <!-- News & Updates -->
+            <div class="sidebar-section news-section">
+                <h3 class="section-title">FARM NEWS</h3>
+                <div class="news-item clickable" data-news="1">
+                    <h4>New Organic Certification Available</h4>
+                    <p class="news-date">2 days ago</p>
+                    <span class="expand-icon">+</span>
+                </div>
+                <div class="news-item clickable" data-news="2">
+                    <h4>Monsoon Forecast Updated</h4>
+                    <p class="news-date">1 week ago</p>
+                    <span class="expand-icon">+</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="js/main-simple.js"></script>
+</body>
+</html>

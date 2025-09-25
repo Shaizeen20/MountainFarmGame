@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateau Farm - Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/farm-pages.css">
+</head>
+<body class="farm-page">
+    <div id="farm-container">
+        <!-- Top Navigation Bar -->
+        <header id="farm-header">
+            <div class="nav-left">
+                <button id="back-btn" class="nav-btn">
+                    <span>🏠</span> Back to Mountain
+                </button>
+                <h1 class="farm-title">🌾 Plateau Farm</h1>
+            </div>
+            
+            <div class="nav-center">
+                <div class="resources-display">
+                    <div class="resource">
+                        <img src="assets/images/ui/icons/seeds-icon.png" alt="Seeds">
+                        <span id="seeds-count">1000</span>
+                    </div>
+                    <div class="resource">
+                        <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                        <span id="coins-count">50</span>
+                    </div>
+                    <div class="resource water">
+                        <span>💧</span>
+                        <span id="water-count">75</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <div class="season-weather">
+                    <span class="season">🌱 Spring</span>
+                    <span class="weather">☀️ 24°C</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Farming Area -->
+        <main id="farming-area">
+            <!-- Left Tools Panel -->
+            <aside id="tools-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">🛠️ FARMING TOOLS</h3>
+                    
+                    <div class="tool-grid">
+                        <button class="tool-btn active" data-tool="plow">
+                            <span class="tool-icon">🚜</span>
+                            <span class="tool-name">Plow</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="plant">
+                            <span class="tool-icon">🌱</span>
+                            <span class="tool-name">Plant</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="water">
+                            <span class="tool-icon">💧</span>
+                            <span class="tool-name">Water</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="harvest">
+                            <span class="tool-icon">🌾</span>
+                            <span class="tool-name">Harvest</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="fertilize">
+                            <span class="tool-icon">🌿</span>
+                            <span class="tool-name">Fertilize</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="inspect">
+                            <span class="tool-icon">🔍</span>
+                            <span class="tool-name">Inspect</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">🌾 PLATEAU CROPS</h3>
+                    
+                    <div class="crop-selection">
+                        <div class="crop-option active" data-crop="wheat">
+                            <img src="assets/images/crops/wheat-icon.png" alt="Wheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Wheat</span>
+                                <span class="crop-time">45 days</span>
+                                <span class="crop-price">₹25/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="barley">
+                            <img src="assets/images/crops/barley-icon.png" alt="Barley" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Barley</span>
+                                <span class="crop-time">40 days</span>
+                                <span class="crop-price">₹22/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="potato">
+                            <img src="assets/images/crops/potato-icon.png" alt="Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🥔</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Potato</span>
+                                <span class="crop-time">60 days</span>
+                                <span class="crop-price">₹18/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="sunflower">
+                            <img src="assets/images/crops/sunflower-icon.png" alt="Sunflower" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌻</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Sunflower</span>
+                                <span class="crop-time">70 days</span>
+                                <span class="crop-price">₹35/kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">📊 PLATEAU STATS</h3>
+                    
+                    <div class="stat-item">
+                        <label>Soil Moisture:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 65%"></div>
+                        </div>
+                        <span>65%</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <label>Fertility:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill fertility" style="width: 80%"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <label>pH Level:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill ph" style="width: 70%"></div>
+                        </div>
+                        <span>6.8</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Farm Plot Grid -->
+            <section id="farm-plot">
+                <div class="plot-grid">
+                    <!-- 6x4 grid of farm plots for plateau farming -->
+                    <!-- Row 1 -->
+                    <div class="farm-cell" data-row="0" data-col="0"></div>
+                    <div class="farm-cell" data-row="0" data-col="1"></div>
+                    <div class="farm-cell" data-row="0" data-col="2"></div>
+                    <div class="farm-cell" data-row="0" data-col="3"></div>
+                    <div class="farm-cell" data-row="0" data-col="4"></div>
+                    <div class="farm-cell" data-row="0" data-col="5"></div>
+                    
+                    <!-- Row 2 -->
+                    <div class="farm-cell" data-row="1" data-col="0"></div>
+                    <div class="farm-cell" data-row="1" data-col="1"></div>
+                    <div class="farm-cell" data-row="1" data-col="2"></div>
+                    <div class="farm-cell" data-row="1" data-col="3"></div>
+                    <div class="farm-cell" data-row="1" data-col="4"></div>
+                    <div class="farm-cell" data-row="1" data-col="5"></div>
+                    
+                    <!-- Row 3 -->
+                    <div class="farm-cell" data-row="2" data-col="0"></div>
+                    <div class="farm-cell" data-row="2" data-col="1"></div>
+                    <div class="farm-cell" data-row="2" data-col="2"></div>
+                    <div class="farm-cell" data-row="2" data-col="3"></div>
+                    <div class="farm-cell" data-row="2" data-col="4"></div>
+                    <div class="farm-cell" data-row="2" data-col="5"></div>
+                    
+                    <!-- Row 4 -->
+                    <div class="farm-cell" data-row="3" data-col="0"></div>
+                    <div class="farm-cell" data-row="3" data-col="1"></div>
+                    <div class="farm-cell" data-row="3" data-col="2"></div>
+                    <div class="farm-cell" data-row="3" data-col="3"></div>
+                    <div class="farm-cell" data-row="3" data-col="4"></div>
+                    <div class="farm-cell" data-row="3" data-col="5"></div>
+                </div>
+            </section>
+
+            <!-- Right Info Panel -->
+            <aside id="info-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">📝 PLATEAU FARMING GUIDE</h3>
+                    
+                    <div class="info-content">
+                        <div class="tip-card">
+                            <h4>🌾 Best Crops for Plateau</h4>
+                            <p>Wheat and barley thrive in plateau soil. The good drainage and moderate climate make it ideal for grain cultivation.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>💧 Water Management</h4>
+                            <p>Plateau areas need efficient irrigation. Consider drip irrigation to conserve water and improve crop yield.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>🌿 Soil Health</h4>
+                            <p>Add organic compost to maintain soil fertility. Crop rotation with legumes helps fix nitrogen naturally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">📈 CURRENT SEASON</h3>
+                    
+                    <div class="season-info">
+                        <div class="season-card">
+                            <span class="season-icon">🌱</span>
+                            <div class="season-details">
+                                <h4>Spring Planting</h4>
+                                <p>Perfect time for sowing wheat and barley. Soil temperature is optimal for seed germination.</p>
+                                <div class="season-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 30%"></div>
+                                    </div>
+                                    <span>Day 15 of 60</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">🏆 ACHIEVEMENTS</h3>
+                    
+                    <div class="achievement-list">
+                        <div class="achievement unlocked">
+                            <span class="achievement-icon">🌾</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">First Harvest</span>
+                                <span class="achievement-desc">Complete your first crop harvest</span>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🚜</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Master Farmer</span>
+                                <span class="achievement-desc">Plant 100 crops</span>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🌿</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Organic Expert</span>
+                                <span class="achievement-desc">Use only organic methods for a season</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="js/farm-base.js"></script>
+    <script src="js/plateau-farm.js"></script>
+</body>
+</html>

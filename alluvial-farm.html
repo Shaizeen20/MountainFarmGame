@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alluvial Valley Farm - Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/main.css?v=20250924-01">
+    <link rel="stylesheet" href="css/farm-pages.css?v=20250924-01">
+    <script src="js/farm-base.js?v=20250924-01"></script>
+    <script src="js/alluvial-farm.js?v=20250924-01"></script>
+</head>
+<body class="farm-page">
+    <div id="farm-container">
+        <!-- Main Farming Area with 3-Layer System (Full Screen) -->
+        <main id="farming-area" class="three-layer-fullscreen">
+            <!-- Sky Animation Layer (now 50% height, merged with river) -->
+            <div class="sky-animation-layer">
+                <video autoplay muted loop class="sky-animation">
+                    <source src="assets/sounds/sky-and-river.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Soil Farming Layer (30% height) -->
+            <div class="soil-farming-layer">
+                <div class="soil-base">
+                    <img src="assets/images/environment/alluvial-soil-full.jpeg" alt="Alluvial Soil" class="soil-background">
+                </div>
+                
+                <!-- Farming Plot Grid Overlay -->
+                <div class="farming-grid-overlay">
+                    <!-- Row 1: River-adjacent plots -->
+                    <div class="farming-plot" data-row="1" data-col="1"></div>
+                    <div class="farming-plot" data-row="1" data-col="2"></div>
+                    <div class="farming-plot" data-row="1" data-col="3"></div>
+                    <div class="farming-plot" data-row="1" data-col="4"></div>
+                    <div class="farming-plot" data-row="1" data-col="5"></div>
+                    <div class="farming-plot" data-row="1" data-col="6"></div>
+                    
+                    <!-- Row 2: Fertile valley plots -->
+                    <div class="farming-plot" data-row="2" data-col="1"></div>
+                    <div class="farming-plot" data-row="2" data-col="2"></div>
+                    <div class="farming-plot" data-row="2" data-col="3"></div>
+                    <div class="farming-plot" data-row="2" data-col="4"></div>
+                    <div class="farming-plot" data-row="2" data-col="5"></div>
+                    <div class="farming-plot" data-row="2" data-col="6"></div>
+                    
+                    <!-- Row 3: Valley highland plots -->
+                    <div class="farming-plot" data-row="3" data-col="1"></div>
+                    <div class="farming-plot" data-row="3" data-col="2"></div>
+                    <div class="farming-plot" data-row="3" data-col="3"></div>
+                    <div class="farming-plot" data-row="3" data-col="4"></div>
+                    <div class="farming-plot" data-row="3" data-col="5"></div>
+                    <div class="farming-plot" data-row="3" data-col="6"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Left Sidebar: Tools and Crops -->
+        <aside id="left-sidebar" class="game-sidebar">
+            <!-- Header Section -->
+            <div class="sidebar-header">
+                <button id="back-btn" class="back-button">
+                    <span>🏠</span> Back to Mountain
+                </button>
+                <h2 class="farm-title">🌊 Alluvial Valley Farm</h2>
+            </div>
+
+            <!-- Resources Display -->
+            <div class="resources-section">
+                <div class="resource-item">
+                    <span class="resource-icon">🌾</span>
+                    <span class="resource-label">Seeds</span>
+                    <span id="seeds-count" class="resource-value">1000</span>
+                </div>
+                <div class="resource-item">
+                    <span class="resource-icon">🪙</span>
+                    <span class="resource-label">Coins</span>
+                    <span id="coins-count" class="resource-value">50</span>
+                </div>
+                <div class="resource-item">
+                    <span class="resource-icon">💧</span>
+                    <span class="resource-label">Water</span>
+                    <span id="water-count" class="resource-value">95</span>
+                </div>
+            </div>
+
+            <!-- Crops Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🌾 VALLEY CROPS</h3>
+                <div class="crop-selection">
+                    <div class="crop-option active" data-crop="rice">
+                        <span class="crop-icon">�</span>
+                        <div class="crop-info">
+                            <span class="crop-name">Rice</span>
+                            <span class="crop-yield">₹35/kg</span>
+                        </div>
+                    </div>
+                    <div class="crop-option" data-crop="maize">
+                        <span class="crop-icon">🌽</span>
+                        <div class="crop-info">
+                            <span class="crop-name">Maize</span>
+                            <span class="crop-yield">₹28/kg</span>
+                        </div>
+                    </div>
+                    <div class="crop-option" data-crop="wheat">
+                        <span class="crop-icon">🌾</span>
+                        <div class="crop-info">
+                            <span class="crop-name">Wheat</span>
+                            <span class="crop-yield">₹25/kg</span>
+                        </div>
+                    </div>
+                    <div class="crop-option" data-crop="potato">
+                        <span class="crop-icon">🥔</span>
+                        <div class="crop-info">
+                            <span class="crop-name">Potato</span>
+                            <span class="crop-yield">₹20/kg</span>
+                        </div>
+                    </div>
+                    <div class="crop-option" data-crop="tea">
+                        <span class="crop-icon">🍵</span>
+                        <div class="crop-info">
+                            <span class="crop-name">Tea</span>
+                            <span class="crop-yield">₹250/kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Tools -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🛠️ ACTIONS</h3>
+                <div class="tool-grid">
+                    <button class="tool-btn active" data-tool="plant">
+                        <img class="tool-icon-img" src="assets/images/ui/icons/icon-plant.png" alt="Plant"/>
+                        <span class="tool-name">Plant</span>
+                    </button>
+                    <button class="tool-btn" data-tool="water">
+                        <img class="tool-icon-img" src="assets/images/ui/icons/icon-water.png" alt="Water"/>
+                        <span class="tool-name">Water</span>
+                    </button>
+                    <button class="tool-btn" data-tool="fertilizer">
+                        <img class="tool-icon-img" src="assets/images/ui/icons/icon-fertilize.png" alt="Fertilize"/>
+                        <span class="tool-name">Fertilize</span>
+                    </button>
+                    <button class="tool-btn" data-tool="harvest">
+                        <img class="tool-icon-img" src="assets/images/ui/icons/icon-harvest.png" alt="Harvest"/>
+                        <span class="tool-name">Harvest</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fertilizer Type (moved to left sidebar) -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🧪 FERTILIZER TYPE</h3>
+                <label><input type="radio" name="fertilizer-type" value="natural" checked /> Natural</label>
+                <label style="margin-left:12px;"><input type="radio" name="fertilizer-type" value="artificial" /> Artificial</label>
+            </div>
+
+            <!-- Sustainable Assets -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🌿 SUSTAINABLE ASSETS</h3>
+                <div class="tool-grid">
+                    <button class="tool-btn" data-tool="asset-compost">
+                        <span class="tool-icon">♻️</span>
+                        <span class="tool-name">Compost Pit</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-mulch">
+                        <span class="tool-icon">🪵</span>
+                        <span class="tool-name">Mulch</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-drip">
+                        <span class="tool-icon">💧➡️</span>
+                        <span class="tool-name">Drip Irrigation</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-rainwater">
+                        <span class="tool-icon">🛢️</span>
+                        <span class="tool-name">Rainwater Tank</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-solar">
+                        <span class="tool-icon">🔆</span>
+                        <span class="tool-name">Solar Pump</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-wind">
+                        <span class="tool-icon">🌬️</span>
+                        <span class="tool-name">Wind Turbine</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-biogas">
+                        <span class="tool-icon">🔥</span>
+                        <span class="tool-name">Biogas Unit</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-trees">
+                        <span class="tool-icon">🌳</span>
+                        <span class="tool-name">Trees</span>
+                    </button>
+                    <button class="tool-btn" data-tool="asset-remove">
+                        <span class="tool-icon">🗑️</span>
+                        <span class="tool-name">Remove Asset</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Sidebar: Game Info and Stats -->
+        <aside id="right-sidebar" class="game-sidebar">
+            <!-- Weather and Season -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🌤️ WEATHER CONDITIONS</h3>
+                <div class="weather-info">
+                    <div class="weather-item">
+                        <span class="weather-label">Season:</span>
+                        <span class="weather-value">🌱 Spring</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-label">Temperature:</span>
+                        <span class="weather-value">🌤️ 26°C</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-label">Humidity:</span>
+                        <span class="weather-value">💧 75%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-section">
+                <h3 class="section-title">🌊 RIVER STATUS</h3>
+                <div class="river-stats">
+                    <div class="stat-item">
+                        <label>Water Level:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill water" style="width: 85%"></div>
+                        </div>
+                        <span>High</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Soil Fertility:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill fertility" style="width: 95%"></div>
+                        </div>
+                        <span>Excellent</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Season Progress:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill season" style="width: 40%"></div>
+                        </div>
+                        <span>Spring 40%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plot Info -->
+            <div class="sidebar-section">
+                <h3 class="section-title">📋 PLOT INFO</h3>
+                <div class="plot-info">
+                    <p>Click on a farming plot to see details and plant crops!</p>
+                    <div class="plot-legend">
+                        <div class="legend-item">
+                            <div class="legend-color river"></div>
+                            <span>River Adjacent - Best for Rice</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color fertile"></div>
+                            <span>Prime Fertile - All Crops</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color valley"></div>
+                            <span>Valley Highland - Grains</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farm Parameters (auto-managed) -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🧪 FARM PARAMETERS</h3>
+                <p>Parameters adapt automatically based on your actions and installed sustainable assets.</p>
+                <div>Soil pH: <strong><span id="param-ph">6.5</span></strong></div>
+                <div style="margin-top:6px; font-size:12px; color:#FFD700;">
+                    Soil health: <strong><span id="param-health">0.70</span></strong> · Groundwater: <strong><span id="param-ground">0.60</span></strong>
+                </div>
+            </div>
+
+            <!-- (Subsections moved under Params tab) -->
+
+            <!-- AI Mentor -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🤖 AI MENTOR</h3>
+                <div id="mentor-recos" style="margin-bottom:8px; color:#FFFACD; font-size:13px;"></div>
+                <div id="mentor-live-hint" style="margin-bottom:8px; font-size:0.9em; line-height:1.3; color:#FFD700;">All good. Keep practicing sustainable farming.</div>
+                <input id="mentor-question" type="text" placeholder="Ask for a quick tip..." style="width:100%; padding:6px; background:none; border:none;" />
+                <button id="ask-mentor-btn" class="tool-btn" style="margin-top:8px; width:100%;">Ask Mentor</button>
+                <div id="mentor-answer" style="margin-top:8px; font-size:0.95em; line-height:1.5; color:#FFFAE6;"></div>
+                <div style="margin-top:8px;">
+                    <input id="personal-tip-input" type="text" placeholder="Write your own tip or note..." style="width:100%; padding:6px; background:none; border:none;" />
+                    <button id="save-personal-tip" class="tool-btn" style="margin-top:6px; width:100%;">Save Personal Tip</button>
+                    <div id="personal-tips-list" style="margin-top:6px; font-size:0.9em; color:#FFFAE6;"></div>
+                </div>
+            </div>
+
+            <!-- Inventory & Market -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🏪 INVENTORY & MARKET</h3>
+                <div id="inventory-list" style="min-height:40px;">No produce yet.</div>
+                <div id="market-list" style="margin-top:6px; font-size:12px; color:#FFFACD;"></div>
+                <div style="display:flex; gap:8px; margin-top:8px;">
+                    <button id="refresh-prices-btn" class="tool-btn" style="flex:1;">Refresh Prices</button>
+                    <button id="sell-all-btn" class="tool-btn" style="flex:1;">Sell All</button>
+                </div>
+            </div>
+            <!-- Storage -->
+            <div class="sidebar-section">
+                <h3 class="section-title">🏚️ STORAGE</h3>
+                <div style="color:#FFFACD; font-size:12px;">
+                    <div><strong>Silo</strong> (<span id="silo-cap">0/100 kg</span>):</div>
+                    <div id="silo-list" style="min-height:24px; margin-bottom:6px;"></div>
+                    <div><strong>Barn</strong> (<span id="barn-cap">0/100 kg</span>):</div>
+                    <div id="barn-list" style="min-height:24px;"></div>
+                    <div style="display:flex; gap:8px; margin-top:8px;">
+                        <button id="store-cereals-btn" class="tool-btn" style="flex:1;">Store Cereals</button>
+                        <button id="store-produce-btn" class="tool-btn" style="flex:1;">Store Produce</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News -->
+            <div class="sidebar-section">
+                <h3 class="section-title">📰 NEWS</h3>
+                <div id="news-ticker" style="color:#FFE680; font-size:12px; min-height:18px;"></div>
+            </div>
+
+            <!-- Alluvial Soil Info -->
+            <div class="sidebar-section" style="padding:18px 16px;">
+                <h3 class="section-title" style="font-size:18px;">🧱 ALLUVIAL SOIL</h3>
+                <ul style="margin:0; padding-left:20px; color:#FFFACD; font-size:14px; line-height:1.6;">
+                    <li>Highly fertile, good water retention, well-drained.</li>
+                    <li>Best for rice, wheat, sugarcane, jute, maize, pulses.</li>
+                    <li>Optimal pH ~6.0–7.0; avoid waterlogging.</li>
+                    <li>Responds well to compost and crop rotation.</li>
+                </ul>
+            </div>
+
+            <!-- Crop Details -->
+            <div class="sidebar-section" style="padding:18px 16px;">
+                <h3 class="section-title" style="font-size:18px;">📚 CROP DETAILS</h3>
+                <div id="crop-details" style="color:#FFFACD; font-size:14px; line-height:1.6;">
+                    Select a crop to see details.
+                </div>
+            </div>
+
+            <!-- Government Support -->
+            <div class="sidebar-section" id="gov-support-panel">
+                <h3 class="section-title">🏛️ GOVERNMENT SUPPORT</h3>
+                <p>If funds or resources are low, you can apply for support.</p>
+                <button id="gov-support-btn" class="tool-btn" style="width:100%;">Apply Support</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

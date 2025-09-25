@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Farm Game - Start Screen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .start-screen {
+            background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .game-title {
+            font-size: 3em;
+            color: #2E8B57;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .start-button {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .start-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .game-description {
+            max-width: 600px;
+            margin: 20px;
+            font-size: 1.2em;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-screen">
+        <h1 class="game-title">🏔️ Mountain Farm Game 🌱</h1>
+        
+        <div class="game-description">
+            <p>Welcome to your mountain farm adventure! Plant crops, tend to your land, and build your farming empire in the beautiful mountain landscape.</p>
+            
+            <p>Features:</p>
+            <ul style="text-align: left; display: inline-block;">
+                <li>🌽 Plant and harvest different crops</li>
+                <li>🏔️ Explore beautiful mountain farming areas</li>
+                <li>🛠️ Use tools to improve your farming</li>
+                <li>🏗️ Build and upgrade farm buildings</li>
+                <li>💰 Earn coins and gems for your hard work</li>
+            </ul>
+        </div>
+        
+        <button class="start-button" onclick="startGame()">Start Farming! 🚀</button>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = 'game.html';
+        }
+    </script>
+</body>
+</html>

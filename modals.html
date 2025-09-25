@@ -1,0 +1,79 @@
+<!-- Plot Detail Modal -->
+<div id="plot-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Plot Actions</h2>
+        <div id="plot-actions">
+            <button id="plant-btn">
+                <img src="assets/images/ui/icons/icon-plant.png" alt="Plant">
+                Plant
+            </button>
+            <button id="fertilize-btn">
+                <img src="assets/images/ui/icons/icon-fertilize.png" alt="Fertilize">
+                Fertilize
+            </button>
+            <button id="water-btn">
+                <img src="assets/images/ui/icons/icon-water.png" alt="Water" onerror="this.style.display='none'">
+                Water
+            </button>
+            <button id="harvest-btn">
+                <img src="assets/images/ui/icons/icon-harvest.png" alt="Harvest">
+                Harvest
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Seed Selection Modal -->
+<div id="seed-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Select Seed</h2>
+        <div id="seed-selection">
+            <button class="seed-option" data-seed="maize">
+                <img src="assets/images/ui/seeds/maize.png" alt="Maize" onerror="this.style.display='none'">
+                <span>Maize - 10 coins</span>
+            </button>
+            <button class="seed-option" data-seed="wheat">
+                <img src="assets/images/crops/wheat-seed.png" alt="Wheat" onerror="this.style.display='none'">
+                <span>Wheat - 8 coins</span>
+            </button>
+            <button class="seed-option" data-seed="rice">
+                <img src="assets/images/crops/rice-seed.png" alt="Rice" onerror="this.style.display='none'">
+                <span>Rice - 12 coins</span>
+            </button>
+            <button class="seed-option" data-seed="potato">
+                <img src="assets/images/crops/potato-seed.png" alt="Potato" onerror="this.style.display='none'">
+                <span>Potato - 6 coins</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Barn Modal -->
+<div id="barn-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Barn Storage</h2>
+        <div id="barn-content">
+            <p>Your harvested crops are stored here.</p>
+            <div id="barn-inventory">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Silo Modal -->
+<div id="silo-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silo Storage</h2>
+        <div id="silo-content">
+            <p>Your seeds and fertilizers are stored here.</p>
+            <div id="silo-inventory">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </div>
+</div>

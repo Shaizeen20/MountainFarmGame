@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillside Farm - Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/farm-pages.css">
+</head>
+<body class="farm-page">
+    <div id="farm-container">
+        <!-- Top Navigation Bar -->
+        <header id="farm-header">
+            <div class="nav-left">
+                <button id="back-btn" class="nav-btn">
+                    <span>🏠</span> Back to Mountain
+                </button>
+                <h1 class="farm-title">⛰️ Hillside Terraces</h1>
+            </div>
+            
+            <div class="nav-center">
+                <div class="resources-display">
+                    <div class="resource">
+                        <img src="assets/images/ui/icons/seeds-icon.png" alt="Seeds">
+                        <span id="seeds-count">1000</span>
+                    </div>
+                    <div class="resource">
+                        <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                        <span id="coins-count">50</span>
+                    </div>
+                    <div class="resource water">
+                        <span>💧</span>
+                        <span id="water-count">60</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <div class="season-weather">
+                    <span class="season">🌱 Spring</span>
+                    <span class="weather">🌤️ 22°C</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Farming Area -->
+        <main id="farming-area">
+            <!-- Left Tools Panel -->
+            <aside id="tools-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">🛠️ TERRACING TOOLS</h3>
+                    
+                    <div class="tool-grid">
+                        <button class="tool-btn active" data-tool="terrace">
+                            <span class="tool-icon">🏗️</span>
+                            <span class="tool-name">Build Terrace</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="plant">
+                            <span class="tool-icon">🌱</span>
+                            <span class="tool-name">Plant</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="water">
+                            <span class="tool-icon">💧</span>
+                            <span class="tool-name">Irrigate</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="harvest">
+                            <span class="tool-icon">🌾</span>
+                            <span class="tool-name">Harvest</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="erosion">
+                            <span class="tool-icon">🛡️</span>
+                            <span class="tool-name">Erosion Control</span>
+                        </button>
+                        
+                        <button class="tool-btn" data-tool="inspect">
+                            <span class="tool-icon">🔍</span>
+                            <span class="tool-name">Inspect</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">🌾 HILLSIDE CROPS</h3>
+                    
+                    <div class="crop-selection">
+                        <div class="crop-option active" data-crop="rice">
+                            <img src="assets/images/crops/rice-icon.png" alt="Rice" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Terraced Rice</span>
+                                <span class="crop-time">90 days</span>
+                                <span class="crop-price">₹30/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="maize">
+                            <img src="assets/images/crops/maize-icon.png" alt="Maize" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌽</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Hill Maize</span>
+                                <span class="crop-time">75 days</span>
+                                <span class="crop-price">₹20/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="millet">
+                            <img src="assets/images/crops/millet-icon.png" alt="Millet" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Finger Millet</span>
+                                <span class="crop-time">65 days</span>
+                                <span class="crop-price">₹28/kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="crop-option" data-crop="tea">
+                            <img src="assets/images/crops/tea-icon.png" alt="Tea" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🍃</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Hill Tea</span>
+                                <span class="crop-time">365 days</span>
+                                <span class="crop-price">₹150/kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">📊 HILLSIDE STATS</h3>
+                    
+                    <div class="stat-item">
+                        <label>Slope Stability:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill stability" style="width: 75%"></div>
+                        </div>
+                        <span>75%</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <label>Water Retention:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill water" style="width: 55%"></div>
+                        </div>
+                        <span>55%</span>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <label>Erosion Risk:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill erosion" style="width: 35%"></div>
+                        </div>
+                        <span>Low</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Farm Plot Grid - Terraced Layout -->
+            <section id="farm-plot" class="terraced-layout">
+                <div class="terrace-level" data-level="1">
+                    <div class="terrace-header">Terrace Level 1 (Top)</div>
+                    <div class="terrace-plots">
+                        <div class="farm-cell terrace" data-row="0" data-col="0" data-terrace="1"></div>
+                        <div class="farm-cell terrace" data-row="0" data-col="1" data-terrace="1"></div>
+                        <div class="farm-cell terrace" data-row="0" data-col="2" data-terrace="1"></div>
+                        <div class="farm-cell terrace" data-row="0" data-col="3" data-terrace="1"></div>
+                    </div>
+                </div>
+                
+                <div class="terrace-level" data-level="2">
+                    <div class="terrace-header">Terrace Level 2</div>
+                    <div class="terrace-plots">
+                        <div class="farm-cell terrace" data-row="1" data-col="0" data-terrace="2"></div>
+                        <div class="farm-cell terrace" data-row="1" data-col="1" data-terrace="2"></div>
+                        <div class="farm-cell terrace" data-row="1" data-col="2" data-terrace="2"></div>
+                        <div class="farm-cell terrace" data-row="1" data-col="3" data-terrace="2"></div>
+                        <div class="farm-cell terrace" data-row="1" data-col="4" data-terrace="2"></div>
+                    </div>
+                </div>
+                
+                <div class="terrace-level" data-level="3">
+                    <div class="terrace-header">Terrace Level 3</div>
+                    <div class="terrace-plots">
+                        <div class="farm-cell terrace" data-row="2" data-col="0" data-terrace="3"></div>
+                        <div class="farm-cell terrace" data-row="2" data-col="1" data-terrace="3"></div>
+                        <div class="farm-cell terrace" data-row="2" data-col="2" data-terrace="3"></div>
+                        <div class="farm-cell terrace" data-row="2" data-col="3" data-terrace="3"></div>
+                        <div class="farm-cell terrace" data-row="2" data-col="4" data-terrace="3"></div>
+                        <div class="farm-cell terrace" data-row="2" data-col="5" data-terrace="3"></div>
+                    </div>
+                </div>
+                
+                <div class="terrace-level" data-level="4">
+                    <div class="terrace-header">Terrace Level 4 (Bottom)</div>
+                    <div class="terrace-plots">
+                        <div class="farm-cell terrace" data-row="3" data-col="0" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="1" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="2" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="3" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="4" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="5" data-terrace="4"></div>
+                        <div class="farm-cell terrace" data-row="3" data-col="6" data-terrace="4"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Info Panel -->
+            <aside id="info-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">📝 TERRACED FARMING GUIDE</h3>
+                    
+                    <div class="info-content">
+                        <div class="tip-card">
+                            <h4>⛰️ Terrace Construction</h4>
+                            <p>Build terraces to prevent soil erosion on slopes. Each level should have proper drainage and retaining walls.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>🌾 Rice Cultivation</h4>
+                            <p>Terraced rice paddies are perfect for hillsides. They conserve water and create beautiful stepped landscapes.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4>🛡️ Erosion Prevention</h4>
+                            <p>Plant grass or legumes on terrace edges. This stabilizes soil and prevents costly erosion damage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">💧 WATER MANAGEMENT</h3>
+                    
+                    <div class="water-system">
+                        <div class="irrigation-level">
+                            <h4>🌊 Irrigation System</h4>
+                            <p>Water flows from top terrace to bottom, maximizing efficiency and preventing waste.</p>
+                            
+                            <div class="water-flow">
+                                <div class="flow-step">
+                                    <span class="flow-icon">💧</span>
+                                    <span>Source → Level 1</span>
+                                </div>
+                                <div class="flow-step">
+                                    <span class="flow-icon">⬇️</span>
+                                    <span>Level 1 → Level 2</span>
+                                </div>
+                                <div class="flow-step">
+                                    <span class="flow-icon">⬇️</span>
+                                    <span>Level 2 → Level 3</span>
+                                </div>
+                                <div class="flow-step">
+                                    <span class="flow-icon">⬇️</span>
+                                    <span>Level 3 → Level 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="section-title">🏆 HILLSIDE ACHIEVEMENTS</h3>
+                    
+                    <div class="achievement-list">
+                        <div class="achievement unlocked">
+                            <span class="achievement-icon">🏗️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Terrace Builder</span>
+                                <span class="achievement-desc">Build your first terrace</span>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🌾</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Rice Master</span>
+                                <span class="achievement-desc">Harvest 1000kg of rice</span>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🛡️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Erosion Guardian</span>
+                                <span class="achievement-desc">Prevent all erosion for a full season</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="js/farm-base.js"></script>
+    <script src="js/hillside-farm.js"></script>
+</body>
+</html>
