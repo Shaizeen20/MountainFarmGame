@@ -27,8 +27,13 @@ BASE_PRICES = {
 @app.route('/api/mentor', methods=['POST'])
 def mentor():
     data = request.json or {}
-    question = data.get('question', 'Give sustainable farming advice for alluvial soil today.')
+    # Strict validation
+    question = data.get('question')
+    if not isinstance(question, str) or not question.strip():
+        question = 'Give sustainable farming advice for alluvial soil today.'
     context = data.get('context', {})
+    if not isinstance(context, dict):
+        context = {}
     # If no API key, return heuristic advice
     if not GEMINI_API_KEY:
         return jsonify({
@@ -77,9 +82,15 @@ def mentor():
 def probability():
     data = request.json or {}
     crop = data.get('crop')
+    if not isinstance(crop, str) or not crop:
+        return jsonify({'error': 'Invalid crop parameter'}), 400
     soil = data.get('soil', 'alluvial')
+    if soil not in ['alluvial', 'mountain']:
+        return jsonify({'error': 'Invalid soil parameter'}), 400
     params = data.get('params', {})
-    practices = set([str(p) for p in data.get('practices', [])])
+    if not isinstance(params, dict):
+        params = {}
+    practices = set([str(p) for p in data.get('practices', []) if isinstance(p, str)])
     # Normalize practice keys (support camelCase and hyphen-case)
     has_mulching = ('mulching' in practices)
     has_drip = ('drip-irrigation' in practices) or ('dripIrrigation' in practices)
@@ -98,9 +109,17 @@ def probability():
         base -= 0.15
 
     ph = params.get('ph', 6.5)
-    soil_health = params.get('soilHealth', 0.7)  # 0..1
-    groundwater = params.get('groundwater', 0.6)  # 0..1
+    if not isinstance(ph, (int, float)) or not (3.5 <= ph <= 9.0):
+        ph = 6.5
+    soil_health = params.get('soilHealth', 0.7)
+    if not isinstance(soil_health, (int, float)) or not (0.0 <= soil_health <= 1.0):
+        soil_health = 0.7
+    groundwater = params.get('groundwater', 0.6)
+    if not isinstance(groundwater, (int, float)) or not (0.0 <= groundwater <= 1.0):
+        groundwater = 0.6
     weather = params.get('weather', 'normal')
+    if weather not in ['normal', 'drought', 'flood', 'hail']:
+        weather = 'normal'
 
     # pH sweet spot 6.0-7.0
     if 6.0 <= ph <= 7.0:
@@ -135,6 +154,8 @@ def probability():
 def prices():
     data = request.json or {}
     crops = data.get('crops', list(BASE_PRICES.keys()))
+    if not isinstance(crops, list) or not all(isinstance(c, str) for c in crops):
+        crops = list(BASE_PRICES.keys())
     price_map = {}
     for c in crops:
         base = BASE_PRICES.get(c, 20)
