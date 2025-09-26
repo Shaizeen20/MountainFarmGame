@@ -135,12 +135,15 @@
 
 /* Side Panels */
 #tools-panel, #info-panel {
-    width: 280px;
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(160, 82, 45, 0.8));
+    width: 320px;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.92), rgba(160, 82, 45, 0.85));
     border: 3px solid #654321;
     overflow-y: auto;
-    padding: 20px;
+    padding: 24px 18px 24px 18px;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 #info-panel {
@@ -149,12 +152,13 @@
 }
 
 .panel-section {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 14px;
+    padding: 18px 14px;
+    margin-bottom: 0;
+    border: 2px solid rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -436,7 +440,7 @@
 /* Individual Farming Plots */
 .farming-plot {
     position: relative;
-    background: transparent;
+    background: url('assets/images/environment/rocky-soil.png') center center/cover no-repeat;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     cursor: pointer;
@@ -548,6 +552,7 @@
     border-radius: 12px;
     padding: 14px 12px;
     font-size: 14px;
+    color: #FFD700;
 }
 
 .section-title {

@@ -307,6 +307,59 @@
                     <button id="sell-all-btn" class="tool-btn" style="flex:1;">Sell All</button>
                 </div>
             </div>
+
+            <!-- Yield & Quality Meters -->
+            <div class="sidebar-section" id="meters-section">
+                <h3 class="section-title">📈 Farm Meters</h3>
+                <div style="margin-bottom:8px;">
+                    <label for="yield-meter">Future Yield:</label>
+                    <progress id="yield-meter" value="70" max="100" style="width:120px;"></progress>
+                    <span id="yield-value">70</span>
+                </div>
+                <div>
+                    <label for="quality-meter">Organic Quality:</label>
+                    <progress id="quality-meter" value="80" max="100" style="width:120px;"></progress>
+                    <span id="quality-value">80</span>
+                </div>
+            </div>
+
+            <!-- Buy/Sell Section -->
+            <div class="sidebar-section" id="buy-sell-section">
+                <h3 class="section-title">💱 BUY / SELL</h3>
+                <div style="display:flex; flex-direction:column; gap:8px;">
+                    <div>
+                        <label>Buy:</label>
+                        <div id="buy-item-group" style="display:flex; gap:6px; margin-bottom:6px;">
+                            <button class="tool-btn buy-item-btn active" data-item="seeds">Seeds</button>
+                            <button class="tool-btn buy-item-btn" data-item="compost">Compost</button>
+                            <button class="tool-btn buy-item-btn" data-item="mulch">Mulch</button>
+                        </div>
+                        <input type="number" id="buy-qty" min="1" value="1" style="width:60px;">
+                        <button id="buy-btn" class="tool-btn">Buy</button>
+                    </div>
+                    <div>
+                        <label>Sell:</label>
+                        <div id="sell-item-group" style="display:flex; gap:6px; margin-bottom:6px;">
+                            <button class="tool-btn sell-item-btn active" data-item="rice">Rice</button>
+                            <button class="tool-btn sell-item-btn" data-item="wheat">Wheat</button>
+                            <button class="tool-btn sell-item-btn" data-item="maize">Maize</button>
+                            <button class="tool-btn sell-item-btn" data-item="potato">Potato</button>
+                        </div>
+                        <input type="number" id="sell-qty" min="1" value="1" style="width:60px;">
+                    </div>
+                    <div>
+                        <label style="font-weight:600; color:#FFD700; font-size:15px;">Select Market Route:</label>
+                        <div style="display:flex; gap:6px; margin-top:4px;">
+                            <button class="tool-btn sell-channel-btn" data-channel="local-market" style="flex:1;">Local Market</button>
+                            <button class="tool-btn sell-channel-btn" data-channel="middleman" style="flex:1;">Trader/Middleman</button>
+                            <button class="tool-btn sell-channel-btn" data-channel="government" style="flex:1;">Government Procurement</button>
+                        </div>
+                        <button id="sell-btn" class="tool-btn" style="margin-top:8px; width:100%;">Sell</button>
+                    </div>
+                    <div id="buy-sell-message" style="color:#FFFACD; font-size:12px; min-height:18px;"></div>
+                </div>
+            </div>
+            </div>
             <!-- Storage -->
             <div class="sidebar-section">
                 <h3 class="section-title">🏚️ STORAGE</h3>

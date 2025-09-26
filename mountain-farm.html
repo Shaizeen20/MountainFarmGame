@@ -380,3 +380,1635 @@
     <script src="js/mountain-farm.js"></script>
 </body>
 </html>
+                                <div class="farming-grid mountain-terraces">
+                                    <!-- High Altitude Terrace -->
+                                    <div class="terrace-row high-altitude">
+                                        <div class="farming-plot" data-row="1" data-col="1"></div>
+                                        <div class="farming-plot" data-row="1" data-col="2"></div>
+                                        <div class="farming-plot" data-row="1" data-col="3"></div>
+                                        <div class="farming-plot" data-row="1" data-col="4"></div>
+                                    </div>
+                    
+                                    <!-- Mid-Slope Terrace -->
+                                    <div class="terrace-row mid-slope">
+                                        <div class="farming-plot" data-row="2" data-col="1"></div>
+                                        <div class="farming-plot" data-row="2" data-col="2"></div>
+                                        <div class="farming-plot" data-row="2" data-col="3"></div>
+                                        <div class="farming-plot" data-row="2" data-col="4"></div>
+                                        <div class="farming-plot" data-row="2" data-col="5"></div>
+                                    </div>
+                    
+                                    <!-- Lower Terrace -->
+                                    <div class="terrace-row lower-slope">
+                                        <div class="farming-plot" data-row="3" data-col="1"></div>
+                                        <div class="farming-plot" data-row="3" data-col="2"></div>
+                                        <div class="farming-plot" data-row="3" data-col="3"></div>
+                                        <div class="farming-plot" data-row="3" data-col="4"></div>
+                                        <div class="farming-plot" data-row="3" data-col="5"></div>
+                                        <div class="farming-plot" data-row="3" data-col="6"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Tools Panel -->
+                            <aside id="tools-panel">
+                                <div class="panel-section">
+                                    <h3 class="section-title">🛠️ MOUNTAIN TOOLS</h3>
+                    
+                                    <div class="tool-grid">
+                                        <button class="tool-btn active" data-tool="alpine">
+                                            <span class="tool-icon">🏔️</span>
+                                            <span class="tool-name">Alpine Plow</span>
+                                        </button>
+                        
+                                        <button class="tool-btn" data-tool="plant">
+                                            <span class="tool-icon">🌱</span>
+                                            <span class="tool-name">Plant Hardy</span>
+                                        </button>
+                        
+                                        <button class="tool-btn" data-tool="greenhouse">
+                                            <span class="tool-icon">🏠</span>
+                                            <span class="tool-name">Greenhouse</span>
+                                        </button>
+                        
+                                        <button class="tool-btn" data-tool="harvest">
+                                            <span class="tool-icon">🌾</span>
+                                            <span class="tool-name">Harvest</span>
+                                        </button>
+                        
+                                        <button class="tool-btn" data-tool="windbreak">
+                                            <span class="tool-icon">🌲</span>
+                                            <span class="tool-name">Windbreak</span>
+                                        </button>
+                        
+                                        <button class="tool-btn" data-tool="inspect">
+                                            <span class="tool-icon">🔍</span>
+                                            <span class="tool-name">Inspect</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">� SUSTAINABLE ASSETS</h3>
+                                    <div class="tool-grid">
+                                        <button class="tool-btn" data-tool="asset-compost"><span class="tool-icon">♻️</span><span class="tool-name">Compost Pit</span></button>
+                                        <button class="tool-btn" data-tool="asset-mulch"><span class="tool-icon">🪵</span><span class="tool-name">Mulch</span></button>
+                                        <button class="tool-btn" data-tool="asset-drip"><span class="tool-icon">💧➡️</span><span class="tool-name">Drip</span></button>
+                                        <button class="tool-btn" data-tool="asset-rainwater"><span class="tool-icon">🛢️</span><span class="tool-name">Rainwater</span></button>
+                                        <button class="tool-btn" data-tool="asset-solar"><span class="tool-icon">🔆</span><span class="tool-name">Solar</span></button>
+                                        <button class="tool-btn" data-tool="asset-wind"><span class="tool-icon">🌬️</span><span class="tool-name">Wind</span></button>
+                                        <button class="tool-btn" data-tool="asset-biogas"><span class="tool-icon">🔥</span><span class="tool-name">Biogas</span></button>
+                                        <button class="tool-btn" data-tool="asset-trees"><span class="tool-icon">🌳</span><span class="tool-name">Trees</span></button>
+                                        <button class="tool-btn" data-tool="asset-remove"><span class="tool-icon">🗑️</span><span class="tool-name">Remove</span></button>
+                                    </div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">�🌾 MOUNTAIN CROPS</h3>
+                    
+                                    <div class="crop-selection">
+                                        <div class="crop-option active" data-crop="buckwheat">
+                                            <img src="assets/images/crops/buckwheat-icon.png" alt="Buckwheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <span class="crop-emoji" style="display:none;">🌾</span>
+                                            <div class="crop-info">
+                                                <span class="crop-name">Buckwheat</span>
+                                                <span class="crop-time">50 days</span>
+                                                <span class="crop-price">₹32/kg</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="crop-option" data-crop="potato">
+                                            <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <span class="crop-emoji" style="display:none;">🥔</span>
+                                            <div class="crop-info">
+                                                <span class="crop-name">Mountain Potato</span>
+                                                <span class="crop-time">80 days</span>
+                                                <span class="crop-price">₹25/kg</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="crop-option" data-crop="apple">
+                                            <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <span class="crop-emoji" style="display:none;">🍎</span>
+                                            <div class="crop-info">
+                                                <span class="crop-name">Mountain Apple</span>
+                                                <span class="crop-time">730 days</span>
+                                                <span class="crop-price">₹80/kg</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="crop-option" data-crop="herbs">
+                                            <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                            <span class="crop-emoji" style="display:none;">🌿</span>
+                                            <div class="crop-info">
+                                                <span class="crop-name">Alpine Herbs</span>
+                                                <span class="crop-time">30 days</span>
+                                                <span class="crop-price">₹120/kg</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                    
+                                    <div class="stat-item">
+                                        <label>Altitude:</label>
+                                        <div class="stat-display">
+                                            <span class="stat-value">2,400m</span>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="stat-item">
+                                        <label>Temperature Range:</label>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill cold" style="width: 45%"></div>
+                                        </div>
+                                        <span>5°C - 18°C</span>
+                                    </div>
+                    
+                                    <div class="stat-item">
+                                        <label>Growing Season:</label>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill season" style="width: 60%"></div>
+                                        </div>
+                                        <span>120 days</span>
+                                    </div>
+                    
+                                    <div class="stat-item">
+                                        <label>Wind Resistance:</label>
+                                        <div class="stat-bar">
+                                            <div class="stat-fill wind" style="width: 30%"></div>
+                                        </div>
+                                        <span>High winds</span>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <!-- Center Farm Plot Grid - Rocky Mountain Layout -->
+                            <section id="farm-plot" class="mountain-layout">
+                                <div class="mountain-area rocky">
+                                    <div class="area-header">🗿 Rocky Outcrop (Limited Space)</div>
+                                    <div class="mountain-plots">
+                                        <div class="farm-cell mountain rocky" data-row="0" data-col="0" data-zone="rocky"></div>
+                                        <div class="farm-cell mountain rocky" data-row="0" data-col="1" data-zone="rocky"></div>
+                                        <div class="farm-cell mountain rocky" data-row="0" data-col="2" data-zone="rocky"></div>
+                                    </div>
+                                </div>
+                
+                                <div class="mountain-area sheltered">
+                                    <div class="area-header">🏔️ Sheltered Valley</div>
+                                    <div class="mountain-plots">
+                                        <div class="farm-cell mountain sheltered" data-row="1" data-col="0" data-zone="sheltered"></div>
+                                        <div class="farm-cell mountain sheltered" data-row="1" data-col="1" data-zone="sheltered"></div>
+                                        <div class="farm-cell mountain sheltered" data-row="1" data-col="2" data-zone="sheltered"></div>
+                                        <div class="farm-cell mountain sheltered" data-row="1" data-col="3" data-zone="sheltered"></div>
+                                        <div class="farm-cell mountain sheltered" data-row="1" data-col="4" data-zone="sheltered"></div>
+                                    </div>
+                                </div>
+                
+                                <div class="mountain-area slope">
+                                    <div class="area-header">⛰️ Gentle Slope</div>
+                                    <div class="mountain-plots">
+                                        <div class="farm-cell mountain slope" data-row="2" data-col="0" data-zone="slope"></div>
+                                        <div class="farm-cell mountain slope" data-row="2" data-col="1" data-zone="slope"></div>
+                                        <div class="farm-cell mountain slope" data-row="2" data-col="2" data-zone="slope"></div>
+                                        <div class="farm-cell mountain slope" data-row="2" data-col="3" data-zone="slope"></div>
+                                    </div>
+                                </div>
+                
+                                <div class="mountain-area greenhouse-zone">
+                                    <div class="area-header">🏠 Greenhouse Area</div>
+                                    <div class="mountain-plots greenhouse">
+                                        <div class="farm-cell mountain greenhouse" data-row="3" data-col="0" data-zone="greenhouse"></div>
+                                        <div class="farm-cell mountain greenhouse" data-row="3" data-col="1" data-zone="greenhouse"></div>
+                                        <div class="farm-cell mountain greenhouse" data-row="3" data-col="2" data-zone="greenhouse"></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Right Info Panel -->
+                            <aside id="info-panel">
+                                <div class="panel-section">
+                                    <h3 class="section-title">📝 MOUNTAIN FARMING GUIDE</h3>
+                    
+                                    <div class="info-content">
+                                        <div class="tip-card">
+                                            <h4>🏔️ High-Altitude Challenges</h4>
+                                            <p>Shorter growing seasons and harsh weather require hardy crops. Choose frost-resistant varieties.</p>
+                                        </div>
+                        
+                                        <div class="tip-card">
+                                            <h4>🏠 Greenhouse Cultivation</h4>
+                                            <p>Extend your growing season with greenhouses. Perfect for herbs and specialty mountain crops.</p>
+                                        </div>
+                        
+                                        <div class="tip-card">
+                                            <h4>🌲 Wind Protection</h4>
+                                            <p>Plant windbreaks with pine or fir trees. They protect crops and provide valuable timber resources.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">💡 PERSONAL TIPS</h3>
+                                    <input id="mountain-tip-input" type="text" placeholder="Add your own tip..." style="width:100%; padding:6px; background:none; border:none; color:#FFFAE6;" />
+                                    <button id="save-mountain-tip" class="tool-btn" style="margin-top:6px; width:100%;">Save Tip</button>
+                                    <div id="mountain-tips-list" style="margin-top:6px; font-size:0.9em; color:#FFFACD;"></div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">🌡️ CLIMATE CONDITIONS</h3>
+                    
+                                    <div class="climate-info">
+                                        <div class="climate-card">
+                                            <h4>❄️ Frost Alert System</h4>
+                                            <div class="frost-warning">
+                                                <span class="warning-level low">🟢 Low Risk</span>
+                                                <p>Current conditions safe for most crops. Monitor overnight temperatures.</p>
+                                            </div>
+                            
+                                            <div class="temperature-forecast">
+                                                <h5>7-Day Forecast:</h5>
+                                                <div class="forecast-row">
+                                                    <span>Today: 12°C - 18°C ☀️</span>
+                                                </div>
+                                                <div class="forecast-row">
+                                                    <span>Tomorrow: 8°C - 15°C ⛅</span>
+                                                </div>
+                                                <div class="forecast-row">
+                                                    <span>Day 3: 5°C - 12°C 🌧️</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel-section">
+                                    <h3 class="section-title">🏆 MOUNTAIN ACHIEVEMENTS</h3>
+                    
+                                    <div class="achievement-list">
+                                        <div class="achievement unlocked">
+                                            <span class="achievement-icon">🏔️</span>
+                                            <div class="achievement-info">
+                                                <span class="achievement-name">Peak Farmer</span>
+                                                <span class="achievement-desc">Start mountain farming</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="achievement locked">
+                                            <span class="achievement-icon">❄️</span>
+                                            <div class="achievement-info">
+                                                <span class="achievement-name">Frost Survivor</span>
+                                                <span class="achievement-desc">Survive a harsh winter season</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="achievement locked">
+                                            <span class="achievement-icon">🌿</span>
+                                            <div class="achievement-info">
+                                                <span class="achievement-name">Herb Master</span>
+                                                <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="achievement locked">
+                                            <span class="achievement-icon">🏠</span>
+                                            <div class="achievement-info">
+                                                <span class="achievement-name">Greenhouse Guardian</span>
+                                                <span class="achievement-desc">Build 10 greenhouse plots</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </main>
+                    </div>
+
+                    <script src="js/farm-base.js"></script>
+                    <script src="js/mountain-farm.js"></script>
+                </body>
+                </html>
+            </header>
+
+            <!-- Floating Tools Panel (Left) -->
+            <aside id="tools-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">🛠️ MOUNTAIN TOOLS</h3>
+                    <div class="tool-grid">
+                        <button class="tool-btn active" data-tool="alpine">
+                            <span class="tool-icon">🏔️</span>
+                            <span class="tool-name">Alpine Plow</span>
+                        </button>
+                        <button class="tool-btn" data-tool="plant">
+                            <span class="tool-icon">🌱</span>
+                            <span class="tool-name">Plant Hardy</span>
+                        </button>
+                        <button class="tool-btn" data-tool="greenhouse">
+                            <span class="tool-icon">🏠</span>
+                            <span class="tool-name">Greenhouse</span>
+                        </button>
+                        <button class="tool-btn" data-tool="harvest">
+                            <span class="tool-icon">🌾</span>
+                            <span class="tool-name">Harvest</span>
+                        </button>
+                        <button class="tool-btn" data-tool="windbreak">
+                            <span class="tool-icon">�</span>
+                            <span class="tool-name">Windbreak</span>
+                        </button>
+                        <button class="tool-btn" data-tool="inspect">
+                            <span class="tool-icon">🔍</span>
+                            <span class="tool-name">Inspect</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="panel-section">
+                    <h3 class="section-title">🌿 SUSTAINABLE ASSETS</h3>
+                    <div class="tool-grid">
+                        <button class="tool-btn" data-tool="asset-compost"><span class="tool-icon">♻️</span><span class="tool-name">Compost Pit</span></button>
+                        <button class="tool-btn" data-tool="asset-mulch"><span class="tool-icon">🪵</span><span class="tool-name">Mulch</span></button>
+                        <button class="tool-btn" data-tool="asset-drip"><span class="tool-icon">💧➡️</span><span class="tool-name">Drip</span></button>
+                        <button class="tool-btn" data-tool="asset-rainwater"><span class="tool-icon">🛢️</span><span class="tool-name">Rainwater</span></button>
+                        <button class="tool-btn" data-tool="asset-solar"><span class="tool-icon">🔆</span><span class="tool-name">Solar</span></button>
+                        <button class="tool-btn" data-tool="asset-wind"><span class="tool-icon">🌬️</span><span class="tool-name">Wind</span></button>
+                        <button class="tool-btn" data-tool="asset-biogas"><span class="tool-icon">🔥</span><span class="tool-name">Biogas</span></button>
+                        <button class="tool-btn" data-tool="asset-trees"><span class="tool-icon">🌳</span><span class="tool-name">Trees</span></button>
+                        <button class="tool-btn" data-tool="asset-remove"><span class="tool-icon">🗑️</span><span class="tool-name">Remove</span></button>
+                    </div>
+                </div>
+                <div class="panel-section">
+                    <h3 class="section-title">🌾 MOUNTAIN CROPS</h3>
+                    <div class="crop-selection">
+                        <div class="crop-option active" data-crop="buckwheat">
+                            <img src="assets/images/crops/buckwheat-icon.png" alt="Buckwheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Buckwheat</span>
+                                <span class="crop-time">50 days</span>
+                                <span class="crop-price">₹32/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="potato">
+                            <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🥔</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Mountain Potato</span>
+                                <span class="crop-time">80 days</span>
+                                <span class="crop-price">₹25/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="apple">
+                            <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🍎</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Mountain Apple</span>
+                                <span class="crop-time">730 days</span>
+                                <span class="crop-price">₹80/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="herbs">
+                            <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌿</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Alpine Herbs</span>
+                                <span class="crop-time">30 days</span>
+                                <span class="crop-price">₹120/kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-section">
+                    <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                    <div class="stat-item">
+                        <label>Altitude:</label>
+                        <div class="stat-display">
+                            <span class="stat-value">2,400m</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <label>Temperature Range:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill cold" style="width: 45%"></div>
+                        </div>
+                        <span>5°C - 18°C</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Growing Season:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill season" style="width: 60%"></div>
+                        </div>
+                        <span>120 days</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Wind Resistance:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill wind" style="width: 30%"></div>
+                        </div>
+                        <span>High winds</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Farming Area with Landscape View -->
+            <main id="farming-area" class="landscape-view">
+                <!-- Sky and Mountain Background Layer -->
+                <div class="sky-layer">
+                    <div class="mountain-sky">
+                        <div class="cloud cloud-1"></div>
+                        <div class="cloud cloud-2"></div>
+                        <div class="cloud cloud-3"></div>
+                        <div class="snow-peaks"></div>
+                    </div>
+                </div>
+                <!-- Rocky Terrain Layer -->
+                <div class="rocky-layer">
+                    <div class="rocky-terrain">
+                        <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                        <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                        <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                        <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                        <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                        <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                        <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                        <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                    </div>
+                </div>
+                <!-- Mountain Farming Plots -->
+                <div class="farming-section">
+                    <div class="farming-grid mountain-terraces">
+                        <!-- High Altitude Terrace -->
+                        <div class="terrace-row high-altitude">
+                            <div class="farming-plot" data-row="1" data-col="1"></div>
+                            <div class="farming-plot" data-row="1" data-col="2"></div>
+                            <div class="farming-plot" data-row="1" data-col="3"></div>
+                            <div class="farming-plot" data-row="1" data-col="4"></div>
+                        </div>
+                        <!-- Mid-Slope Terrace -->
+                        <div class="terrace-row mid-slope">
+                            <div class="farming-plot" data-row="2" data-col="1"></div>
+                            <div class="farming-plot" data-row="2" data-col="2"></div>
+                            <div class="farming-plot" data-row="2" data-col="3"></div>
+                            <div class="farming-plot" data-row="2" data-col="4"></div>
+                            <div class="farming-plot" data-row="2" data-col="5"></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Info Panel -->
+            <aside id="info-panel">
+                <div class="panel-section">
+                    <h3 class="section-title">📝 MOUNTAIN FARMING GUIDE</h3>
+                    <div class="info-content">
+                        <div class="tip-card">
+                            <h4>🏔️ High-Altitude Challenges</h4>
+                            <p>Shorter growing seasons and harsh weather require hardy crops. Choose frost-resistant varieties.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>🏠 Greenhouse Cultivation</h4>
+                            <p>Extend your growing season with greenhouses. Perfect for herbs and specialty mountain crops.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>🌲 Wind Protection</h4>
+                            <p>Plant windbreaks with pine or fir trees. They protect crops and provide valuable timber resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-section">
+                    <h3 class="section-title">🏆 MOUNTAIN ACHIEVEMENTS</h3>
+                    <div class="achievement-list">
+                        <div class="achievement unlocked">
+                            <span class="achievement-icon">🏔️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Peak Farmer</span>
+                                <span class="achievement-desc">Start mountain farming</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">❄️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Frost Survivor</span>
+                                <span class="achievement-desc">Survive a harsh winter season</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🌿</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Herb Master</span>
+                                <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🏠</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Greenhouse Guardian</span>
+                                <span class="achievement-desc">Build 10 greenhouse plots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+                    <!-- High Altitude Terrace -->
+                    <div class="terrace-row high-altitude">
+                        <div class="farming-plot" data-row="1" data-col="1"></div>
+                        <div class="farming-plot" data-row="1" data-col="2"></div>
+                        <div class="farming-plot" data-row="1" data-col="3"></div>
+                        <div class="farming-plot" data-row="1" data-col="4"></div>
+                    </div>
+                    
+                    <!-- Mid-Slope Terrace -->
+                    <div class="terrace-row mid-slope">
+                        <div class="farming-plot" data-row="2" data-col="1"></div>
+                        <div class="farming-plot" data-row="2" data-col="2"></div>
+                        <div class="farming-plot" data-row="2" data-col="3"></div>
+                        <div class="farming-plot" data-row="2" data-col="4"></div>
+                        <div class="farming-plot" data-row="2" data-col="5"></div>
+                    </div>
+                    
+                    <div id="farm-container">
+                        <!-- Top Navigation Bar -->
+                        <header id="farm-header">
+                            <!DOCTYPE html>
+                            <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Mountain Farm - Mountain Farm Game</title>
+                                <link rel="stylesheet" href="css/main.css">
+                                <link rel="stylesheet" href="css/farm-pages.css">
+                            </head>
+                            <body class="farm-page">
+                                <div id="farm-container">
+                                    <!-- Top Navigation Bar -->
+                                    <header id="farm-header">
+                                        <div class="nav-left">
+                                            <button id="back-btn" class="nav-btn">
+                                                <span>🏠</span> Back to Mountain
+                                            </button>
+                                            <h1 class="farm-title">🏔️ Mountain Peak Farm</h1>
+                                        </div>
+            
+                                        <div class="nav-center">
+                                            <div class="resources-display">
+                                                <div class="resource">
+                                                    <img src="assets/images/ui/icons/seeds-icon.png" alt="Seeds">
+                                                    <span id="seeds-count">1000</span>
+                                                </div>
+                                                <div class="resource">
+                                                    <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                                                    <span id="coins-count">50</span>
+                                                </div>
+                                                <div class="resource water">
+                                                    <span>❄️</span>
+                                                    <span id="water-count">90</span>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="nav-right">
+                                            <div class="season-weather">
+                                                <span class="season">🌱 Spring</span>
+                                                <span class="weather">🌬️ 18°C</span>
+                                            </div>
+                                        </div>
+                                    </header>
+
+                                    <!-- Main Farming Area with Landscape View -->
+                                    <main id="farming-area" class="landscape-view">
+                                        <!-- Sky and Mountain Background Layer -->
+                                        <div class="sky-layer">
+                                            <div class="mountain-sky">
+                                                <div class="cloud cloud-1"></div>
+                                                <div class="cloud cloud-2"></div>
+                                                <div class="cloud cloud-3"></div>
+                                                <div class="snow-peaks"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rocky Terrain Layer -->
+                                        <div class="rocky-layer">
+                                            <div class="rocky-terrain">
+                                                <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                                                <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                                                <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                                                <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                                                <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                                                <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                                                <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                                                <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Mountain Farming Plots -->
+                                        <div class="farming-section">
+                                            <div class="farming-grid mountain-terraces">
+                                                <!-- High Altitude Terrace -->
+                                                <div class="terrace-row high-altitude">
+                                                    <div class="farming-plot" data-row="1" data-col="1"></div>
+                                                    <div class="farming-plot" data-row="1" data-col="2"></div>
+                                                    <div class="farming-plot" data-row="1" data-col="3"></div>
+                                                    <div class="farming-plot" data-row="1" data-col="4"></div>
+                                                </div>
+                    
+                                                <!-- Mid-Slope Terrace -->
+                                                <div class="terrace-row mid-slope">
+                                                    <div class="farming-plot" data-row="2" data-col="1"></div>
+                                                    <div class="farming-plot" data-row="2" data-col="2"></div>
+                                                    <div class="farming-plot" data-row="2" data-col="3"></div>
+                                                    <div class="farming-plot" data-row="2" data-col="4"></div>
+                                                    <div class="farming-plot" data-row="2" data-col="5"></div>
+                                                </div>
+                    
+                                                <!-- Lower Terrace -->
+                                                <div class="terrace-row lower-slope">
+                                                    <div class="farming-plot" data-row="3" data-col="1"></div>
+                                                    <div class="farming-plot" data-row="3" data-col="2"></div>
+                                                    <div class="farming-plot" data-row="3" data-col="3"></div>
+                                                    <div class="farming-plot" data-row="3" data-col="4"></div>
+                                                    <div class="farming-plot" data-row="3" data-col="5"></div>
+                                                    <div class="farming-plot" data-row="3" data-col="6"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Floating Tools Panel -->
+                                        <aside id="tools-panel">
+                                            <div class="panel-section">
+                                                <h3 class="section-title">🛠️ MOUNTAIN TOOLS</h3>
+                    
+                                                <div class="tool-grid">
+                                                    <button class="tool-btn active" data-tool="alpine">
+                                                        <span class="tool-icon">🏔️</span>
+                                                        <span class="tool-name">Alpine Plow</span>
+                                                    </button>
+                        
+                                                    <button class="tool-btn" data-tool="plant">
+                                                        <span class="tool-icon">🌱</span>
+                                                        <span class="tool-name">Plant Hardy</span>
+                                                    </button>
+                        
+                                                    <button class="tool-btn" data-tool="greenhouse">
+                                                        <span class="tool-icon">🏠</span>
+                                                        <span class="tool-name">Greenhouse</span>
+                                                    </button>
+                        
+                                                    <button class="tool-btn" data-tool="harvest">
+                                                        <span class="tool-icon">🌾</span>
+                                                        <span class="tool-name">Harvest</span>
+                                                    </button>
+                        
+                                                    <button class="tool-btn" data-tool="windbreak">
+                                                        <span class="tool-icon">🌲</span>
+                                                        <span class="tool-name">Windbreak</span>
+                                                    </button>
+                        
+                                                    <button class="tool-btn" data-tool="inspect">
+                                                        <span class="tool-icon">🔍</span>
+                                                        <span class="tool-name">Inspect</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">� SUSTAINABLE ASSETS</h3>
+                                                <div class="tool-grid">
+                                                    <button class="tool-btn" data-tool="asset-compost"><span class="tool-icon">♻️</span><span class="tool-name">Compost Pit</span></button>
+                                                    <button class="tool-btn" data-tool="asset-mulch"><span class="tool-icon">🪵</span><span class="tool-name">Mulch</span></button>
+                                                    <button class="tool-btn" data-tool="asset-drip"><span class="tool-icon">💧➡️</span><span class="tool-name">Drip</span></button>
+                                                    <button class="tool-btn" data-tool="asset-rainwater"><span class="tool-icon">🛢️</span><span class="tool-name">Rainwater</span></button>
+                                                    <button class="tool-btn" data-tool="asset-solar"><span class="tool-icon">🔆</span><span class="tool-name">Solar</span></button>
+                                                    <button class="tool-btn" data-tool="asset-wind"><span class="tool-icon">🌬️</span><span class="tool-name">Wind</span></button>
+                                                    <button class="tool-btn" data-tool="asset-biogas"><span class="tool-icon">🔥</span><span class="tool-name">Biogas</span></button>
+                                                    <button class="tool-btn" data-tool="asset-trees"><span class="tool-icon">🌳</span><span class="tool-name">Trees</span></button>
+                                                    <button class="tool-btn" data-tool="asset-remove"><span class="tool-icon">🗑️</span><span class="tool-name">Remove</span></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">�🌾 MOUNTAIN CROPS</h3>
+                    
+                                                <div class="crop-selection">
+                                                    <div class="crop-option active" data-crop="buckwheat">
+                                                        <img src="assets/images/crops/buckwheat-icon.png" alt="Buckwheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                        <span class="crop-emoji" style="display:none;">🌾</span>
+                                                        <div class="crop-info">
+                                                            <span class="crop-name">Buckwheat</span>
+                                                            <span class="crop-time">50 days</span>
+                                                            <span class="crop-price">₹32/kg</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="crop-option" data-crop="potato">
+                                                        <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                        <span class="crop-emoji" style="display:none;">🥔</span>
+                                                        <div class="crop-info">
+                                                            <span class="crop-name">Mountain Potato</span>
+                                                            <span class="crop-time">80 days</span>
+                                                            <span class="crop-price">₹25/kg</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="crop-option" data-crop="apple">
+                                                        <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                        <span class="crop-emoji" style="display:none;">🍎</span>
+                                                        <div class="crop-info">
+                                                            <span class="crop-name">Mountain Apple</span>
+                                                            <span class="crop-time">730 days</span>
+                                                            <span class="crop-price">₹80/kg</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="crop-option" data-crop="herbs">
+                                                        <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                        <span class="crop-emoji" style="display:none;">🌿</span>
+                                                        <div class="crop-info">
+                                                            <span class="crop-name">Alpine Herbs</span>
+                                                            <span class="crop-time">30 days</span>
+                                                            <span class="crop-price">₹120/kg</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                    
+                                                <div class="stat-item">
+                                                    <label>Altitude:</label>
+                                                    <div class="stat-display">
+                                                        <span class="stat-value">2,400m</span>
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="stat-item">
+                                                    <label>Temperature Range:</label>
+                                                    <div class="stat-bar">
+                                                        <div class="stat-fill cold" style="width: 45%"></div>
+                                                    </div>
+                                                    <span>5°C - 18°C</span>
+                                                </div>
+                    
+                                                <div class="stat-item">
+                                                    <label>Growing Season:</label>
+                                                    <div class="stat-bar">
+                                                        <div class="stat-fill season" style="width: 60%"></div>
+                                                    </div>
+                                                    <span>120 days</span>
+                                                </div>
+                    
+                                                <div class="stat-item">
+                                                    <label>Wind Resistance:</label>
+                                                    <div class="stat-bar">
+                                                        <div class="stat-fill wind" style="width: 30%"></div>
+                                                    </div>
+                                                    <span>High winds</span>
+                                                </div>
+                                            </div>
+                                        </aside>
+
+                                        <!-- Center Farm Plot Grid - Rocky Mountain Layout -->
+                                        <section id="farm-plot" class="mountain-layout">
+                                            <div class="mountain-area rocky">
+                                                <div class="area-header">🗿 Rocky Outcrop (Limited Space)</div>
+                                                <div class="mountain-plots">
+                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="0" data-zone="rocky"></div>
+                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="1" data-zone="rocky"></div>
+                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="2" data-zone="rocky"></div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="mountain-area sheltered">
+                                                <div class="area-header">🏔️ Sheltered Valley</div>
+                                                <div class="mountain-plots">
+                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="0" data-zone="sheltered"></div>
+                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="1" data-zone="sheltered"></div>
+                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="2" data-zone="sheltered"></div>
+                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="3" data-zone="sheltered"></div>
+                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="4" data-zone="sheltered"></div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="mountain-area slope">
+                                                <div class="area-header">⛰️ Gentle Slope</div>
+                                                <div class="mountain-plots">
+                                                    <div class="farm-cell mountain slope" data-row="2" data-col="0" data-zone="slope"></div>
+                                                    <div class="farm-cell mountain slope" data-row="2" data-col="1" data-zone="slope"></div>
+                                                    <div class="farm-cell mountain slope" data-row="2" data-col="2" data-zone="slope"></div>
+                                                    <div class="farm-cell mountain slope" data-row="2" data-col="3" data-zone="slope"></div>
+                                                </div>
+                                            </div>
+                
+                                            <div class="mountain-area greenhouse-zone">
+                                                <div class="area-header">🏠 Greenhouse Area</div>
+                                                <div class="mountain-plots greenhouse">
+                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="0" data-zone="greenhouse"></div>
+                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="1" data-zone="greenhouse"></div>
+                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="2" data-zone="greenhouse"></div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <!-- Right Info Panel -->
+                                        <aside id="info-panel">
+                                            <div class="panel-section">
+                                                <h3 class="section-title">📝 MOUNTAIN FARMING GUIDE</h3>
+                    
+                                                <div class="info-content">
+                                                    <div class="tip-card">
+                                                        <h4>🏔️ High-Altitude Challenges</h4>
+                                                        <p>Shorter growing seasons and harsh weather require hardy crops. Choose frost-resistant varieties.</p>
+                                                    </div>
+                        
+                                                    <div class="tip-card">
+                                                        <h4>🏠 Greenhouse Cultivation</h4>
+                                                        <p>Extend your growing season with greenhouses. Perfect for herbs and specialty mountain crops.</p>
+                                                    </div>
+                        
+                                                    <div class="tip-card">
+                                                        <h4>🌲 Wind Protection</h4>
+                                                        <p>Plant windbreaks with pine or fir trees. They protect crops and provide valuable timber resources.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">💡 PERSONAL TIPS</h3>
+                                                <input id="mountain-tip-input" type="text" placeholder="Add your own tip..." style="width:100%; padding:6px; background:none; border:none; color:#FFFAE6;" />
+                                                <button id="save-mountain-tip" class="tool-btn" style="margin-top:6px; width:100%;">Save Tip</button>
+                                                <div id="mountain-tips-list" style="margin-top:6px; font-size:0.9em; color:#FFFACD;"></div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">🌡️ CLIMATE CONDITIONS</h3>
+                    
+                                                <div class="climate-info">
+                                                    <div class="climate-card">
+                                                        <h4>❄️ Frost Alert System</h4>
+                                                        <div class="frost-warning">
+                                                            <span class="warning-level low">🟢 Low Risk</span>
+                                                            <p>Current conditions safe for most crops. Monitor overnight temperatures.</p>
+                                                        </div>
+                            
+                                                        <div class="temperature-forecast">
+                                                            <h5>7-Day Forecast:</h5>
+                                                            <div class="forecast-row">
+                                                                <span>Today: 12°C - 18°C ☀️</span>
+                                                            </div>
+                                                            <div class="forecast-row">
+                                                                <span>Tomorrow: 8°C - 15°C ⛅</span>
+                                                            </div>
+                                                            <div class="forecast-row">
+                                                                <span>Day 3: 5°C - 12°C 🌧️</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-section">
+                                                <h3 class="section-title">🏆 MOUNTAIN ACHIEVEMENTS</h3>
+                    
+                                                <div class="achievement-list">
+                                                    <div class="achievement unlocked">
+                                                        <span class="achievement-icon">🏔️</span>
+                                                        <div class="achievement-info">
+                                                            <span class="achievement-name">Peak Farmer</span>
+                                                            <span class="achievement-desc">Start mountain farming</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="achievement locked">
+                                                        <span class="achievement-icon">❄️</span>
+                                                        <div class="achievement-info">
+                                                            <span class="achievement-name">Frost Survivor</span>
+                                                            <span class="achievement-desc">Survive a harsh winter season</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="achievement locked">
+                                                        <span class="achievement-icon">🌿</span>
+                                                        <div class="achievement-info">
+                                                            <span class="achievement-name">Herb Master</span>
+                                                            <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="achievement locked">
+                                                        <span class="achievement-icon">🏠</span>
+                                                        <div class="achievement-info">
+                                                            <span class="achievement-name">Greenhouse Guardian</span>
+                                                            <span class="achievement-desc">Build 10 greenhouse plots</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                    </main>
+                                </div>
+
+                                <script src="js/farm-base.js"></script>
+                                <script src="js/mountain-farm.js"></script>
+                            </body>
+                            </html>
+                        </header>
+
+                        <!-- Main Farming Area with Landscape View -->
+                        <main id="farming-area" class="landscape-view">
+                            <!-- Sky and Mountain Background Layer -->
+                            <div class="sky-layer">
+                                <div class="mountain-sky">
+                                    <div class="cloud cloud-1"></div>
+                                    <div class="cloud cloud-2"></div>
+                                    <div class="cloud cloud-3"></div>
+                                    <div class="snow-peaks"></div>
+                                </div>
+                            </div>
+
+                            <!-- Rocky Terrain Layer -->
+                            <div class="rocky-layer">
+                                <div class="rocky-terrain">
+                                    <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                                    <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                                    <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                                    <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                                    <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                                    <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                                    <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                                    <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Mountain Farming Plots -->
+                            <div class="farming-section">
+                                <div class="farming-grid mountain-terraces">
+                                    <!-- High Altitude Terrace -->
+                                    <div class="terrace-row high-altitude">
+                                        <div class="farming-plot" data-row="1" data-col="1"></div>
+                                        <div class="farming-plot" data-row="1" data-col="2"></div>
+                                        <div class="farming-plot" data-row="1" data-col="3"></div>
+                                        <div class="farming-plot" data-row="1" data-col="4"></div>
+                                    </div>
+                                    <!-- Mid-Slope Terrace -->
+                                    <div class="terrace-row mid-slope">
+                                        <div class="farming-plot" data-row="2" data-col="1"></div>
+                                        <div class="farming-plot" data-row="2" data-col="2"></div>
+                                        <div class="farming-plot" data-row="2" data-col="3"></div>
+                                        <div class="farming-plot" data-row="2" data-col="4"></div>
+                                        <div class="farming-plot" data-row="2" data-col="5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+
+                        <!-- Floating Tools Panel -->
+                        <aside id="tools-panel" class="floating-panel">
+                            ...tools panel code...
+                        </aside>
+
+                        <!-- Right Info Panel -->
+                        <aside id="info-panel">
+                            ...info panel code...
+                        </aside>
+                                            <span class="crop-time">50 days</span>
+                                            <span class="crop-price">₹32/kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="crop-option" data-crop="potato">
+                                        <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                        <span class="crop-emoji" style="display:none;">🥔</span>
+                                        <div class="crop-info">
+                                            <span class="crop-name">Mountain Potato</span>
+                                            <span class="crop-time">80 days</span>
+                                            <span class="crop-price">₹25/kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="crop-option" data-crop="apple">
+                                        <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                        <span class="crop-emoji" style="display:none;">🍎</span>
+                                        <div class="crop-info">
+                                            <span class="crop-name">Mountain Apple</span>
+                                            <span class="crop-time">730 days</span>
+                                            <span class="crop-price">₹80/kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="crop-option" data-crop="herbs">
+                                        <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                        <span class="crop-emoji" style="display:none;">🌿</span>
+                                        <div class="crop-info">
+                                            <span class="crop-name">Alpine Herbs</span>
+                                            <span class="crop-time">30 days</span>
+                                            <span class="crop-price">₹120/kg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-section">
+                                <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                                <div class="stat-item">
+                                    <label>Altitude:</label>
+                                    <div id="farm-container">
+                                        <!-- Top Navigation Bar -->
+                                        <header id="farm-header">
+                                            <!DOCTYPE html>
+                                            <html lang="en">
+                                            <head>
+                                                <meta charset="UTF-8">
+                                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                <title>Mountain Farm - Mountain Farm Game</title>
+                                                <link rel="stylesheet" href="css/main.css">
+                                                <link rel="stylesheet" href="css/farm-pages.css">
+                                            </head>
+                                            <body class="farm-page">
+                                                <div id="farm-container">
+                                                    <!-- Top Navigation Bar -->
+                                                    <header id="farm-header">
+                                                        <div class="nav-left">
+                                                            <button id="back-btn" class="nav-btn">
+                                                                <span>🏠</span> Back to Mountain
+                                                            </button>
+                                                            <h1 class="farm-title">🏔️ Mountain Peak Farm</h1>
+                                                        </div>
+            
+                                                        <div class="nav-center">
+                                                            <div class="resources-display">
+                                                                <div class="resource">
+                                                                    <img src="assets/images/ui/icons/seeds-icon.png" alt="Seeds">
+                                                                    <span id="seeds-count">1000</span>
+                                                                </div>
+                                                                <div class="resource">
+                                                                    <img src="assets/images/ui/currency/coin.png" alt="Coins">
+                                                                    <span id="coins-count">50</span>
+                                                                </div>
+                                                                <div class="resource water">
+                                                                    <span>❄️</span>
+                                                                    <span id="water-count">90</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+            
+                                                        <div class="nav-right">
+                                                            <div class="season-weather">
+                                                                <span class="season">🌱 Spring</span>
+                                                                <span class="weather">🌬️ 18°C</span>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+
+                                                    <!-- Main Farming Area with Landscape View -->
+                                                    <main id="farming-area" class="landscape-view">
+                                                        <!-- Sky and Mountain Background Layer -->
+                                                        <div class="sky-layer">
+                                                            <div class="mountain-sky">
+                                                                <div class="cloud cloud-1"></div>
+                                                                <div class="cloud cloud-2"></div>
+                                                                <div class="cloud cloud-3"></div>
+                                                                <div class="snow-peaks"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Rocky Terrain Layer -->
+                                                        <div class="rocky-layer">
+                                                            <div class="rocky-terrain">
+                                                                <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                                                                <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                                                                <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                                                                <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                                                                <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                                                                <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                                                                <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                                                                <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Mountain Farming Plots -->
+                                                        <div class="farming-section">
+                                                            <div class="farming-grid mountain-terraces">
+                                                                <!-- High Altitude Terrace -->
+                                                                <div class="terrace-row high-altitude">
+                                                                    <div class="farming-plot" data-row="1" data-col="1"></div>
+                                                                    <div class="farming-plot" data-row="1" data-col="2"></div>
+                                                                    <div class="farming-plot" data-row="1" data-col="3"></div>
+                                                                    <div class="farming-plot" data-row="1" data-col="4"></div>
+                                                                </div>
+                    
+                                                                <!-- Mid-Slope Terrace -->
+                                                                <div class="terrace-row mid-slope">
+                                                                    <div class="farming-plot" data-row="2" data-col="1"></div>
+                                                                    <div class="farming-plot" data-row="2" data-col="2"></div>
+                                                                    <div class="farming-plot" data-row="2" data-col="3"></div>
+                                                                    <div class="farming-plot" data-row="2" data-col="4"></div>
+                                                                    <div class="farming-plot" data-row="2" data-col="5"></div>
+                                                                </div>
+                    
+                                                                <!-- Lower Terrace -->
+                                                                <div class="terrace-row lower-slope">
+                                                                    <div class="farming-plot" data-row="3" data-col="1"></div>
+                                                                    <div class="farming-plot" data-row="3" data-col="2"></div>
+                                                                    <div class="farming-plot" data-row="3" data-col="3"></div>
+                                                                    <div class="farming-plot" data-row="3" data-col="4"></div>
+                                                                    <div class="farming-plot" data-row="3" data-col="5"></div>
+                                                                    <div class="farming-plot" data-row="3" data-col="6"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Floating Tools Panel -->
+                                                        <aside id="tools-panel">
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">🛠️ MOUNTAIN TOOLS</h3>
+                    
+                                                                <div class="tool-grid">
+                                                                    <button class="tool-btn active" data-tool="alpine">
+                                                                        <span class="tool-icon">🏔️</span>
+                                                                        <span class="tool-name">Alpine Plow</span>
+                                                                    </button>
+                        
+                                                                    <button class="tool-btn" data-tool="plant">
+                                                                        <span class="tool-icon">🌱</span>
+                                                                        <span class="tool-name">Plant Hardy</span>
+                                                                    </button>
+                        
+                                                                    <button class="tool-btn" data-tool="greenhouse">
+                                                                        <span class="tool-icon">🏠</span>
+                                                                        <span class="tool-name">Greenhouse</span>
+                                                                    </button>
+                        
+                                                                    <button class="tool-btn" data-tool="harvest">
+                                                                        <span class="tool-icon">🌾</span>
+                                                                        <span class="tool-name">Harvest</span>
+                                                                    </button>
+                        
+                                                                    <button class="tool-btn" data-tool="windbreak">
+                                                                        <span class="tool-icon">🌲</span>
+                                                                        <span class="tool-name">Windbreak</span>
+                                                                    </button>
+                        
+                                                                    <button class="tool-btn" data-tool="inspect">
+                                                                        <span class="tool-icon">🔍</span>
+                                                                        <span class="tool-name">Inspect</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">� SUSTAINABLE ASSETS</h3>
+                                                                <div class="tool-grid">
+                                                                    <button class="tool-btn" data-tool="asset-compost"><span class="tool-icon">♻️</span><span class="tool-name">Compost Pit</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-mulch"><span class="tool-icon">🪵</span><span class="tool-name">Mulch</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-drip"><span class="tool-icon">💧➡️</span><span class="tool-name">Drip</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-rainwater"><span class="tool-icon">🛢️</span><span class="tool-name">Rainwater</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-solar"><span class="tool-icon">🔆</span><span class="tool-name">Solar</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-wind"><span class="tool-icon">🌬️</span><span class="tool-name">Wind</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-biogas"><span class="tool-icon">🔥</span><span class="tool-name">Biogas</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-trees"><span class="tool-icon">🌳</span><span class="tool-name">Trees</span></button>
+                                                                    <button class="tool-btn" data-tool="asset-remove"><span class="tool-icon">🗑️</span><span class="tool-name">Remove</span></button>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">�🌾 MOUNTAIN CROPS</h3>
+                    
+                                                                <div class="crop-selection">
+                                                                    <div class="crop-option active" data-crop="buckwheat">
+                                                                        <img src="assets/images/crops/buckwheat-icon.png" alt="Buckwheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                                        <span class="crop-emoji" style="display:none;">🌾</span>
+                                                                        <div class="crop-info">
+                                                                            <span class="crop-name">Buckwheat</span>
+                                                                            <span class="crop-time">50 days</span>
+                                                                            <span class="crop-price">₹32/kg</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="crop-option" data-crop="potato">
+                                                                        <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                                        <span class="crop-emoji" style="display:none;">🥔</span>
+                                                                        <div class="crop-info">
+                                                                            <span class="crop-name">Mountain Potato</span>
+                                                                            <span class="crop-time">80 days</span>
+                                                                            <span class="crop-price">₹25/kg</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="crop-option" data-crop="apple">
+                                                                        <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                                        <span class="crop-emoji" style="display:none;">🍎</span>
+                                                                        <div class="crop-info">
+                                                                            <span class="crop-name">Mountain Apple</span>
+                                                                            <span class="crop-time">730 days</span>
+                                                                            <span class="crop-price">₹80/kg</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="crop-option" data-crop="herbs">
+                                                                        <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                                                        <span class="crop-emoji" style="display:none;">🌿</span>
+                                                                        <div class="crop-info">
+                                                                            <span class="crop-name">Alpine Herbs</span>
+                                                                            <span class="crop-time">30 days</span>
+                                                                            <span class="crop-price">₹120/kg</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                    
+                                                                <div class="stat-item">
+                                                                    <label>Altitude:</label>
+                                                                    <div class="stat-display">
+                                                                        <span class="stat-value">2,400m</span>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="stat-item">
+                                                                    <label>Temperature Range:</label>
+                                                                    <div class="stat-bar">
+                                                                        <div class="stat-fill cold" style="width: 45%"></div>
+                                                                    </div>
+                                                                    <span>5°C - 18°C</span>
+                                                                </div>
+                    
+                                                                <div class="stat-item">
+                                                                    <label>Growing Season:</label>
+                                                                    <div class="stat-bar">
+                                                                        <div class="stat-fill season" style="width: 60%"></div>
+                                                                    </div>
+                                                                    <span>120 days</span>
+                                                                </div>
+                    
+                                                                <div class="stat-item">
+                                                                    <label>Wind Resistance:</label>
+                                                                    <div class="stat-bar">
+                                                                        <div class="stat-fill wind" style="width: 30%"></div>
+                                                                    </div>
+                                                                    <span>High winds</span>
+                                                                </div>
+                                                            </div>
+                                                        </aside>
+
+                                                        <!-- Center Farm Plot Grid - Rocky Mountain Layout -->
+                                                        <section id="farm-plot" class="mountain-layout">
+                                                            <div class="mountain-area rocky">
+                                                                <div class="area-header">🗿 Rocky Outcrop (Limited Space)</div>
+                                                                <div class="mountain-plots">
+                                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="0" data-zone="rocky"></div>
+                                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="1" data-zone="rocky"></div>
+                                                                    <div class="farm-cell mountain rocky" data-row="0" data-col="2" data-zone="rocky"></div>
+                                                                </div>
+                                                            </div>
+                
+                                                            <div class="mountain-area sheltered">
+                                                                <div class="area-header">🏔️ Sheltered Valley</div>
+                                                                <div class="mountain-plots">
+                                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="0" data-zone="sheltered"></div>
+                                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="1" data-zone="sheltered"></div>
+                                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="2" data-zone="sheltered"></div>
+                                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="3" data-zone="sheltered"></div>
+                                                                    <div class="farm-cell mountain sheltered" data-row="1" data-col="4" data-zone="sheltered"></div>
+                                                                </div>
+                                                            </div>
+                
+                                                            <div class="mountain-area slope">
+                                                                <div class="area-header">⛰️ Gentle Slope</div>
+                                                                <div class="mountain-plots">
+                                                                    <div class="farm-cell mountain slope" data-row="2" data-col="0" data-zone="slope"></div>
+                                                                    <div class="farm-cell mountain slope" data-row="2" data-col="1" data-zone="slope"></div>
+                                                                    <div class="farm-cell mountain slope" data-row="2" data-col="2" data-zone="slope"></div>
+                                                                    <div class="farm-cell mountain slope" data-row="2" data-col="3" data-zone="slope"></div>
+                                                                </div>
+                                                            </div>
+                
+                                                            <div class="mountain-area greenhouse-zone">
+                                                                <div class="area-header">🏠 Greenhouse Area</div>
+                                                                <div class="mountain-plots greenhouse">
+                                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="0" data-zone="greenhouse"></div>
+                                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="1" data-zone="greenhouse"></div>
+                                                                    <div class="farm-cell mountain greenhouse" data-row="3" data-col="2" data-zone="greenhouse"></div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+
+                                                        <!-- Right Info Panel -->
+                                                        <aside id="info-panel">
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">📝 MOUNTAIN FARMING GUIDE</h3>
+                    
+                                                                <div class="info-content">
+                                                                    <div class="tip-card">
+                                                                        <h4>🏔️ High-Altitude Challenges</h4>
+                                                                        <p>Shorter growing seasons and harsh weather require hardy crops. Choose frost-resistant varieties.</p>
+                                                                    </div>
+                        
+                                                                    <div class="tip-card">
+                                                                        <h4>🏠 Greenhouse Cultivation</h4>
+                                                                        <p>Extend your growing season with greenhouses. Perfect for herbs and specialty mountain crops.</p>
+                                                                    </div>
+                        
+                                                                    <div class="tip-card">
+                                                                        <h4>🌲 Wind Protection</h4>
+                                                                        <p>Plant windbreaks with pine or fir trees. They protect crops and provide valuable timber resources.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">💡 PERSONAL TIPS</h3>
+                                                                <input id="mountain-tip-input" type="text" placeholder="Add your own tip..." style="width:100%; padding:6px; background:none; border:none; color:#FFFAE6;" />
+                                                                <button id="save-mountain-tip" class="tool-btn" style="margin-top:6px; width:100%;">Save Tip</button>
+                                                                <div id="mountain-tips-list" style="margin-top:6px; font-size:0.9em; color:#FFFACD;"></div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">🌡️ CLIMATE CONDITIONS</h3>
+                    
+                                                                <div class="climate-info">
+                                                                    <div class="climate-card">
+                                                                        <h4>❄️ Frost Alert System</h4>
+                                                                        <div class="frost-warning">
+                                                                            <span class="warning-level low">🟢 Low Risk</span>
+                                                                            <p>Current conditions safe for most crops. Monitor overnight temperatures.</p>
+                                                                        </div>
+                            
+                                                                        <div class="temperature-forecast">
+                                                                            <h5>7-Day Forecast:</h5>
+                                                                            <div class="forecast-row">
+                                                                                <span>Today: 12°C - 18°C ☀️</span>
+                                                                            </div>
+                                                                            <div class="forecast-row">
+                                                                                <span>Tomorrow: 8°C - 15°C ⛅</span>
+                                                                            </div>
+                                                                            <div class="forecast-row">
+                                                                                <span>Day 3: 5°C - 12°C 🌧️</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="panel-section">
+                                                                <h3 class="section-title">🏆 MOUNTAIN ACHIEVEMENTS</h3>
+                    
+                                                                <div class="achievement-list">
+                                                                    <div class="achievement unlocked">
+                                                                        <span class="achievement-icon">🏔️</span>
+                                                                        <div class="achievement-info">
+                                                                            <span class="achievement-name">Peak Farmer</span>
+                                                                            <span class="achievement-desc">Start mountain farming</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="achievement locked">
+                                                                        <span class="achievement-icon">❄️</span>
+                                                                        <div class="achievement-info">
+                                                                            <span class="achievement-name">Frost Survivor</span>
+                                                                            <span class="achievement-desc">Survive a harsh winter season</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="achievement locked">
+                                                                        <span class="achievement-icon">🌿</span>
+                                                                        <div class="achievement-info">
+                                                                            <span class="achievement-name">Herb Master</span>
+                                                                            <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                                                                        </div>
+                                                                    </div>
+                        
+                                                                    <div class="achievement locked">
+                                                                        <span class="achievement-icon">🏠</span>
+                                                                        <div class="achievement-info">
+                                                                            <span class="achievement-name">Greenhouse Guardian</span>
+                                                                            <span class="achievement-desc">Build 10 greenhouse plots</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </aside>
+                                                    </main>
+                                                </div>
+
+                                                <script src="js/farm-base.js"></script>
+                                                <script src="js/mountain-farm.js"></script>
+                                            </body>
+                                            </html>
+                                        </header>
+
+                                        <div class="mountain-layout">
+                                            <!-- Left Floating Tools Panel -->
+                                            <aside id="tools-panel">
+                                                ...tools panel code...
+                                            </aside>
+
+                                            <!-- Centered Farming Area -->
+                                            <main id="farming-area" class="landscape-view">
+                                                <!-- Sky and Mountain Background Layer -->
+                                                <div class="sky-layer">
+                                                    <div class="mountain-sky">
+                                                        <div class="cloud cloud-1"></div>
+                                                        <div class="cloud cloud-2"></div>
+                                                        <div class="cloud cloud-3"></div>
+                                                        <div class="snow-peaks"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- Rocky Terrain Layer -->
+                                                <div class="rocky-layer">
+                                                    <div class="rocky-terrain">
+                                                        <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                                                        <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                                                        <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                                                        <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                                                        <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                                                        <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                                                        <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                                                        <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- Mountain Farming Plots -->
+                                                <div class="farming-section">
+                                                    <div class="farming-grid mountain-terraces">
+                                                        <!-- High Altitude Terrace -->
+                                                        <div class="terrace-row high-altitude">
+                                                            <div class="farming-plot" data-row="1" data-col="1"></div>
+                                                            <div class="farming-plot" data-row="1" data-col="2"></div>
+                                                            <div class="farming-plot" data-row="1" data-col="3"></div>
+                                                            <div class="farming-plot" data-row="1" data-col="4"></div>
+                                                        </div>
+                                                        <!-- Mid-Slope Terrace -->
+                                                        <div class="terrace-row mid-slope">
+                                                            <div class="farming-plot" data-row="2" data-col="1"></div>
+                                                            <div class="farming-plot" data-row="2" data-col="2"></div>
+                                                            <div class="farming-plot" data-row="2" data-col="3"></div>
+                                                            <div class="farming-plot" data-row="2" data-col="4"></div>
+                                                            <div class="farming-plot" data-row="2" data-col="5"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </main>
+
+                                            <!-- Right Info Panel -->
+                                            <aside id="info-panel">
+                                                ...info panel code...
+                                            </aside>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="achievement locked">
+                                        <span class="achievement-icon">❄️</span>
+                                        <div class="achievement-info">
+                                            <span class="achievement-name">Frost Survivor</span>
+                                            <span class="achievement-desc">Survive a harsh winter season</span>
+                                        </div>
+                                    </div>
+                                    <div class="achievement locked">
+                                        <span class="achievement-icon">🌿</span>
+                                        <div class="achievement-info">
+                                            <span class="achievement-name">Herb Master</span>
+                                            <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="achievement locked">
+                                        <span class="achievement-icon">🏠</span>
+                                        <div class="achievement-info">
+                                            <span class="achievement-name">Greenhouse Guardian</span>
+                                            <span class="achievement-desc">Build 10 greenhouse plots</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <button class="tool-btn" data-tool="asset-rainwater"><span class="tool-icon">🛢️</span><span class="tool-name">Rainwater</span></button>
+                        <button class="tool-btn" data-tool="asset-solar"><span class="tool-icon">🔆</span><span class="tool-name">Solar</span></button>
+                        <button class="tool-btn" data-tool="asset-wind"><span class="tool-icon">🌬️</span><span class="tool-name">Wind</span></button>
+                        <button class="tool-btn" data-tool="asset-biogas"><span class="tool-icon">🔥</span><span class="tool-name">Biogas</span></button>
+                        <button class="tool-btn" data-tool="asset-trees"><span class="tool-icon">🌳</span><span class="tool-name">Trees</span></button>
+                        <button class="tool-btn" data-tool="asset-remove"><span class="tool-icon">🗑️</span><span class="tool-name">Remove</span></button>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3 class="section-title">🌾 MOUNTAIN CROPS</h3>
+                    <div class="crop-selection">
+                        <div class="crop-option active" data-crop="buckwheat">
+                            <img src="assets/images/crops/buckwheat-icon.png" alt="Buckwheat" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌾</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Buckwheat</span>
+                                <span class="crop-time">50 days</span>
+                                <span class="crop-price">₹32/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="potato">
+                            <img src="assets/images/crops/potato-icon.png" alt="Mountain Potato" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🥔</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Mountain Potato</span>
+                                <span class="crop-time">80 days</span>
+                                <span class="crop-price">₹25/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="apple">
+                            <img src="assets/images/crops/apple-icon.png" alt="Mountain Apple" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🍎</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Mountain Apple</span>
+                                <span class="crop-time">730 days</span>
+                                <span class="crop-price">₹80/kg</span>
+                            </div>
+                        </div>
+                        <div class="crop-option" data-crop="herbs">
+                            <img src="assets/images/crops/herbs-icon.png" alt="Alpine Herbs" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="crop-emoji" style="display:none;">🌿</span>
+                            <div class="crop-info">
+                                <span class="crop-name">Alpine Herbs</span>
+                                <span class="crop-time">30 days</span>
+                                <span class="crop-price">₹120/kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3 class="section-title">📊 MOUNTAIN STATS</h3>
+                    <div class="stat-item">
+                        <label>Altitude:</label>
+                        <div class="stat-display">
+                            <span class="stat-value">2,400m</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <label>Temperature Range:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill cold" style="width: 45%"></div>
+                        </div>
+                        <span>5°C - 18°C</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Growing Season:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill season" style="width: 60%"></div>
+                        </div>
+                        <span>120 days</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Wind Resistance:</label>
+                        <div class="stat-bar">
+                            <div class="stat-fill wind" style="width: 30%"></div>
+                        </div>
+                        <span>High winds</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Farming Area -->
+            <main id="farming-area" class="landscape-view">
+                <!-- Sky and Mountain Background Layer -->
+                <div class="sky-layer">
+                    <div class="mountain-sky">
+                        <div class="cloud cloud-1"></div>
+                        <div class="cloud cloud-2"></div>
+                        <div class="cloud cloud-3"></div>
+                        <div class="snow-peaks"></div>
+                    </div>
+                </div>
+                <!-- Rocky Terrain Layer -->
+                <div class="rocky-layer">
+                    <div class="rocky-terrain">
+                        <div class="rock-tile" style="left: 10%; top: 20%;"></div>
+                        <div class="rock-tile" style="left: 25%; top: 40%;"></div>
+                        <div class="rock-tile" style="left: 45%; top: 15%;"></div>
+                        <div class="rock-tile" style="left: 65%; top: 35%;"></div>
+                        <div class="rock-tile" style="left: 80%; top: 25%;"></div>
+                        <div class="rock-tile" style="left: 35%; top: 60%;"></div>
+                        <div class="rock-tile" style="left: 55%; top: 55%;"></div>
+                        <div class="rock-tile" style="left: 15%; top: 70%;"></div>
+                    </div>
+                </div>
+                        <div class="achievement unlocked">
+                            <span class="achievement-icon">🏔️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Peak Farmer</span>
+                                <span class="achievement-desc">Start mountain farming</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">❄️</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Frost Survivor</span>
+                                <span class="achievement-desc">Survive a harsh winter season</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🌿</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Herb Master</span>
+                                <span class="achievement-desc">Cultivate 50kg of alpine herbs</span>
+                            </div>
+                        </div>
+                        <div class="achievement locked">
+                            <span class="achievement-icon">🏠</span>
+                            <div class="achievement-info">
+                                <span class="achievement-name">Greenhouse Guardian</span>
+                                <span class="achievement-desc">Build 10 greenhouse plots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>

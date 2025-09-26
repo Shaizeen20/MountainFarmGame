@@ -1,7 +1,45 @@
 // Alluvial Farm specific functionality with landscape view interactions
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Alluvial Farm JS Loaded');
+    // Buy item selection logic
+    let selectedBuyItem = 'seeds';
+    const buyItemBtns = document.querySelectorAll('.buy-item-btn');
+    buyItemBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            buyItemBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedBuyItem = btn.getAttribute('data-item');
+        });
+    });
+    // Set default active
+    if (buyItemBtns.length) buyItemBtns[0].classList.add('active');
+
+    // Sell item selection logic
+    let selectedSellItem = 'rice';
+    const sellItemBtns = document.querySelectorAll('.sell-item-btn');
+    sellItemBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            sellItemBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedSellItem = btn.getAttribute('data-item');
+        });
+    });
+    // Set default active
+    if (sellItemBtns.length) sellItemBtns[0].classList.add('active');
+    // Sell channel selection logic
+    let selectedSellChannel = 'local-market';
+    const channelBtns = document.querySelectorAll('.sell-channel-btn');
+    channelBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            channelBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedSellChannel = btn.getAttribute('data-channel');
+        });
+    });
+    // Set default active
+    if (channelBtns.length) channelBtns[0].classList.add('active');
+    // ...existing code...
+    // ...existing code...
     
     // Initialize specific alluvial farm features
     setupLandscapePlots();
@@ -85,6 +123,120 @@ document.addEventListener('DOMContentLoaded', function() {
     renderMentorRecommendations();
     // Refresh mentor recommendations periodically as conditions change
     setInterval(renderMentorRecommendations, 6000);
+
+
+    // Advanced Buy/Sell logic
+    const buyBtn = document.getElementById('buy-btn');
+    const sellBtn = document.getElementById('sell-btn');
+    const buyItem = document.getElementById('buy-item');
+    const buyQty = document.getElementById('buy-qty');
+    const sellItem = document.getElementById('sell-item');
+    const sellQty = document.getElementById('sell-qty');
+    const sellChannel = document.getElementById('sell-channel');
+    const buySellMsg = document.getElementById('buy-sell-message');
+    const yieldMeter = document.getElementById('yield-meter');
+    const qualityMeter = document.getElementById('quality-meter');
+    const yieldValue = document.getElementById('yield-value');
+    const qualityValue = document.getElementById('quality-value');
+
+    // Game state inventory and meters
+    const gameState = window.farmBase && window.farmBase.gameState ? window.farmBase.gameState : {};
+    if (!gameState.inventory) gameState.inventory = { seeds: 1000, compost: 10, rice: 0, wheat: 0, maize: 0, potato: 0 };
+    if (gameState.currency === undefined) gameState.currency = 100;
+    if (gameState.yield === undefined) gameState.yield = 70;
+    if (gameState.quality === undefined) gameState.quality = 80;
+
+    // Meter UI sync
+    function updateMeters() {
+        if (yieldMeter) yieldMeter.value = gameState.yield;
+        if (yieldValue) yieldValue.textContent = gameState.yield;
+        if (qualityMeter) qualityMeter.value = gameState.quality;
+        if (qualityValue) qualityValue.textContent = gameState.quality;
+    }
+
+    // Inventory UI sync
+    function updateInventoryUI() {
+        const inv = gameState.inventory;
+        const coins = gameState.currency || 0;
+        const invList = document.getElementById('inventory-list');
+        if (invList) {
+            invList.textContent = `Seeds: ${inv.seeds || 0}, Compost: ${inv.compost || 0}, Rice: ${inv.rice || 0}, Wheat: ${inv.wheat || 0}, Maize: ${inv.maize || 0}, Potato: ${inv.potato || 0}, Coins: ${coins}`;
+        }
+    }
+
+    // Buy logic
+    buyBtn && buyBtn.addEventListener('click', function() {
+    const item = selectedBuyItem;
+        const qty = parseInt(buyQty.value);
+        if (!item || qty < 1) return;
+        // Prices
+        const prices = { seeds: 2, compost: 5 };
+        const cost = prices[item] * qty;
+        if (gameState.currency < cost) {
+            buySellMsg.textContent = `Not enough coins! Need ${cost} coins.`;
+            return;
+        }
+        gameState.currency -= cost;
+        gameState.inventory[item] = (gameState.inventory[item] || 0) + qty;
+        // Buying compost increases organic quality
+        if (item === 'compost') {
+            gameState.quality = Math.min(100, gameState.quality + qty);
+        }
+        buySellMsg.textContent = `Bought ${qty} ${item} for ${cost} coins.`;
+        updateInventoryUI();
+        updateMeters();
+    });
+
+    // Sell logic
+    sellBtn && sellBtn.addEventListener('click', function() {
+    const crop = selectedSellItem;
+        const qty = parseInt(sellQty.value);
+        const channel = selectedSellChannel;
+        if (!crop || qty < 1 || !channel) return;
+        if ((gameState.inventory[crop] || 0) < qty) {
+            buySellMsg.textContent = `Not enough ${crop} to sell!`;
+            return;
+        }
+        // Stricter parameter checks
+        const params = window.farmBase && window.farmBase.gameState && window.farmBase.gameState.params ? window.farmBase.gameState.params : {};
+        if ((params.soilHealth !== undefined && params.soilHealth < 0.5) ||
+            (params.groundwater !== undefined && params.groundwater < 0.4) ||
+            (params.ph !== undefined && (params.ph < 6.0 || params.ph > 7.5)) ||
+            gameState.yield < 40 || gameState.quality < 50) {
+            buySellMsg.textContent = `Sale denied: Farm parameters too low. Soil health, groundwater, pH, yield, and quality must be higher for market sales.`;
+            return;
+        }
+        // Dynamic pricing
+        let basePrice = 10;
+        if (crop === 'rice') basePrice = 12;
+        if (crop === 'wheat') basePrice = 10;
+        if (crop === 'maize') basePrice = 8;
+        if (crop === 'potato') basePrice = 9;
+        // Channel multipliers
+        let channelMult = 1;
+        if (channel === 'local-market') channelMult = 1.2;
+        if (channel === 'middleman') channelMult = 1.0;
+        if (channel === 'government') channelMult = 0.9;
+        // Meter effects
+        const yieldMult = 0.5 + (gameState.yield / 200); // 0.5 to 1.0
+        const qualityMult = 0.5 + (gameState.quality / 200); // 0.5 to 1.0
+        const price = Math.round(basePrice * channelMult * yieldMult * qualityMult * qty);
+        gameState.inventory[crop] -= qty;
+        gameState.currency += price;
+        let channelLabel = '';
+        if (channel === 'local-market') channelLabel = 'Local Market';
+        if (channel === 'middleman') channelLabel = 'Trader/Middleman';
+        if (channel === 'government') channelLabel = 'Government Procurement';
+        buySellMsg.textContent = `Sold ${qty} ${crop} via ${channelLabel} for ${price} coins.`;
+        // Selling to local market increases yield, to government increases quality
+        if (channel === 'local-market') gameState.yield = Math.min(100, gameState.yield + 2 * qty);
+        if (channel === 'government') gameState.quality = Math.min(100, gameState.quality + 2 * qty);
+        updateInventoryUI();
+        updateMeters();
+    });
+
+    updateInventoryUI();
+    updateMeters();
 });
 
 function setupLandscapePlots() {
