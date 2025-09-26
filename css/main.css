@@ -413,3 +413,122 @@ body {
     width: 18%;
     height: 18%;
 }
+
+/* Community Forum Section */
+#farm-container {
+    background: linear-gradient(180deg, #0b0b0b 0%, #1b120a 40%, #2a1d12 100%);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#forum-area {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.forum-section {
+    background: rgba(255,255,255,0.07);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+    padding: 32px 36px;
+    width: 520px;
+    max-width: 90vw;
+}
+
+.forum-section h2 {
+    color: #FFD700;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(45deg, #228B22, #32CD32);
+    color: white;
+    border: 2px solid #1C5F1C;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.leaderboard-entry {
+    background: linear-gradient(90deg, #ffe8a3 0%, #fffacb 100%);
+    color: #8B4513;
+    padding: 10px 20px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.forum-post {
+    background: linear-gradient(90deg, #183b18 0%, #2a1d12 100%);
+    color: #FFFACD;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#forum-input {
+    width: 70%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #FFD700;
+    background: rgba(255,255,255,0.13);
+    color: #8B4513;
+    font-size: 15px;
+    margin-right: 8px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#forum-input:focus {
+    border: 2px solid #32CD32;
+    background: rgba(255,255,255,0.18);
+}
+
+#forum-post-btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #32CD32 0%, #FFD700 100%);
+    color: #2a1d12;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(50,205,50,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+#forum-post-btn:hover {
+    background: linear-gradient(90deg, #FFD700 0%, #32CD32 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.forum-title {
+    text-align: center;
+    font-size: 28px;
+    color: #FFD700;
+    font-weight: 900;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}

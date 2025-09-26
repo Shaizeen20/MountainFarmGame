@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const inEl = document.getElementById('mountain-tip-input');
         const btn = document.getElementById('save-mountain-tip');
         const list = document.getElementById('mountain-tips-list');
+        
         function render(){
             const arr = JSON.parse(localStorage.getItem('mountainTips')||'[]');
             if (list) list.innerHTML = arr.slice(-5).map(t=>'<div>• '+escapeHtml(t)+'</div>').join('');
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             render();
         }
     } catch(e) {}
+    
 });
 
 // Ensure clicking tool buttons updates selected tool and UI state

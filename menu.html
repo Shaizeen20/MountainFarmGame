@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mountain Farm Game - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-screen {
+            background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .menu-title {
+            font-size: 2.5em;
+            color: #2E8B57;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 24px;
+        }
+        .menu-options {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+        }
+        .menu-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 18px 36px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+            transition: transform 0.2s;
+        }
+        .menu-btn:hover {
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+        }
+        .menu-desc {
+            margin-top: 18px;
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-screen">
+        <h1 class="menu-title">🌱 Choose Your Game Mode</h1>
+        <div class="menu-options">
+            <div>
+                <button class="menu-btn" onclick="window.location.href='index.html'">🧑‍🌾 Soil Selection Mode</button>
+                <div class="menu-desc">Pick your soil type and start farming in your favorite landscape.</div>
+            </div>
+            <div>
+                <button class="menu-btn" onclick="window.location.href='geo.html'">🌍 Geolocation Mode</button>
+                <div class="menu-desc">Let the game use your location to suggest crops and farming style.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

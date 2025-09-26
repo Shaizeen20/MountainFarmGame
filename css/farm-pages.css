@@ -2197,3 +2197,35 @@
         transform: scale(1.02);
     }
 }
+
+.leaderboard-entry {
+    background: rgba(255,255,255,0.08);
+    color: #FFD700;
+    padding: 8px 16px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.forum-post {
+    background: rgba(0,0,0,0.08);
+    color: #FFFACD;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+}
+.forum-section h2 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Example for left sidebar */
+#left-sidebar {
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+/* Example for right sidebar */
+#right-sidebar {
+    overflow-y: auto;
+    max-height: 100vh;
+}

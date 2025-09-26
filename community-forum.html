@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Forum - Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="farm-page">
+    <div id="farm-container">
+            <div class="nav-left">
+                <button onclick="window.location.href='index.html'" class="nav-btn">
+                    <span>🏠</span> Back to Mountain Farm
+                </button>
+            </div>
+            
+        <main id="forum-area" style="padding:32px;">
+            <section class="forum-section">
+                <h2 style="color:#FFD700;">🏆 Leaderboard</h2>
+                <div id="leaderboard-list" style="margin-bottom:32px;">
+                    <!-- Leaderboard entries will go here -->
+                    <div class="leaderboard-entry">1. FarmerA - 12000 pts</div>
+                    <div class="leaderboard-entry">2. FarmerB - 9500 pts</div>
+                    <div class="leaderboard-entry">3. FarmerC - 8700 pts</div>
+                </div>
+                <h2 style="color:#FFD700;">💬 Community Forum</h2>
+                <div id="forum-posts">
+                    <div class="forum-post">
+                        <strong>FarmerA:</strong> How do you maximize potato yield at high altitude?
+                    </div>
+                    <div class="forum-post">
+                        <strong>FarmerB:</strong> Best asset for wind protection?
+                    </div>
+                </div>
+                <div style="margin-top:24px;">
+                    <input type="text" id="forum-input" placeholder="Share your tip or question..." style="color:white;width:70%;padding:8px;">
+                    <button id="forum-post-btn" class="tool-btn" style="padding:8px 16px;">Post</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Simple post logic for demo
+        document.getElementById('forum-post-btn').onclick = function() {
+            var val = document.getElementById('forum-input').value.trim();
+            if(val) {
+                var div = document.createElement('div');
+                div.className = 'forum-post';
+                div.innerHTML = '<strong>You:</strong> ' + val;
+                document.getElementById('forum-posts').appendChild(div);
+                document.getElementById('forum-input').value = '';
+            }
+        };
+    </script>
+</body>
+</html>

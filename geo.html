@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation Mode - Mountain Farm Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .geo-form-container {
+            background: rgba(255,255,255,0.09);
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+            padding: 36px 44px;
+            width: 420px;
+            max-width: 90vw;
+            text-align: center;
+        }
+        .geo-title {
+            font-size: 2em;
+            color: #2E8B57;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+        .geo-form label {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+        }
+        .geo-form input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1.5px solid #FFD700;
+            background: rgba(255,255,255,0.13);
+            color: #2E8B57;
+            font-size: 15px;
+            margin-bottom: 18px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .geo-form input[type="text"]:focus {
+            border: 2px solid #32CD32;
+            background: rgba(255,255,255,0.18);
+        }
+        .geo-form button {
+            padding: 12px 28px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #32CD32 0%, #FFD700 100%);
+            color: #2a1d12;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(50,205,50,0.08);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .geo-form button:hover {
+            background: linear-gradient(90deg, #FFD700 0%, #32CD32 100%);
+            transform: translateY(-2px) scale(1.04);
+        }
+    </style>
+</head>
+<body>
+    <div class="geo-form-container">
+        <div class="geo-title">🌍 Enter Your Location</div>
+        <form class="geo-form" action="index.html" method="get">
+            <label for="address">Address or Area:</label>
+            <input type="text" id="address" name="address" placeholder="Type your address or area..." required>
+            <button type="submit">Find My Farm!</button>
+        </form>
+    </div>
+</body>
+</html>

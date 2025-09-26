@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
             img.addEventListener('load', alignSoilOverlayToImage);
         }
     }
-
+    // Community Forum button navigation
+    const forumBtn = document.getElementById('community-forum-btn');
+    if (forumBtn) {
+        forumBtn.addEventListener('click', function() {
+            window.location.href = 'community-forum.html';
+        });
+    }
     // Handle clickable soil regions
     setupSoilRegions();
     
