@@ -62,20 +62,43 @@
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(50,205,50,0.08);
             transition: background 0.2s, transform 0.2s;
+            margin-bottom: 12px;
         }
         .geo-form button:hover {
             background: linear-gradient(90deg, #FFD700 0%, #32CD32 100%);
             transform: translateY(-2px) scale(1.04);
         }
     </style>
+    <script>
+        function fetchLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+                    // You can fill these values into hidden fields or use them as needed
+                }, function() {
+                    alert("Unable to fetch location.");
+                });
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="geo-form-container">
         <div class="geo-title">🌍 Enter Your Location</div>
         <form class="geo-form" action="index.html" method="get">
-            <label for="address">Address or Area:</label>
-            <input type="text" id="address" name="address" placeholder="Type your address or area..." required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="House/Street/Area" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="City" required>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="State" required>
+            <label for="pincode">Pin Code:</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Pin Code" required>
             <button type="submit">Find My Farm!</button>
+            <div style="margin: 12px 0; font-weight: bold; color: #32CD32;">or</div>
+            <button type="button" onclick="fetchLocation()">📍 Fetch Current Location</button>
         </form>
     </div>
 </body>
